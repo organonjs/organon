@@ -2,6 +2,6 @@
 	"devDependencies": {
 		"@organon/commitlint-config": "link:./commitlint-config",
 		"commitlint": "^11.0.0",
-		"conventional-changelog-conventionalcommits": "^4.5.0"
+		"conventional-changelog-organon": "link:./conventional-changelog"
 	}
 }

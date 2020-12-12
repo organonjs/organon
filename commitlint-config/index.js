@@ -40,10 +40,21 @@ const subjectRules = {
   "subject-min-length": [2, "always", 1],
 }
 
+let types = [
+  "👷 build",
+  "💚 ci",
+  "📝 docs",
+  "✨ feat",
+  "🐛 fix",
+  "⚡️ perf",
+  "♻️ refactor",
+  "⏪ revert",
+  "🎨 style",
+  "✅ test"
+];
+
 const typeRules = {
-  "type-enum": [2, "always", [
-    "build"
-  ]],
+  "type-enum": [2, "always", types],
   "type-case": [2, "always", "lower-case"],
   "type-empty": [2, "never"],
   "type-max-length": headerRules["header-max-length"],
@@ -58,6 +69,6 @@ const miscRules = {
 const rules = {...bodyRules, ...footerRules, ...headerRules, ...scopeRules, ...subjectRules, ...typeRules};
 
 module.exports = {
-  parserPreset: "conventional-changelog-conventionalcommits",
+  parserPreset: "conventional-changelog-organon",
   rules
 };
