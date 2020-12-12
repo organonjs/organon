@@ -1,7 +1,7 @@
 devDependencies:
-  '@commitlint/config-conventional': 11.0.0
   '@organon/commitlint-config': 'link:commitlint-config'
   commitlint: 11.0.0
+  conventional-changelog-conventionalcommits: 4.5.0
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.10.4:
@@ -48,14 +48,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-YWZWg1DuqqO5Zjh7vUOeSX76vm0FFyz4y0cpGMFhrhvUi5unc4IVfCXZ6337R9zxuBtmveiRuuhQqnRRer+13g==
-  /@commitlint/config-conventional/11.0.0:
-    dependencies:
-      conventional-changelog-conventionalcommits: 4.5.0
-    dev: true
-    engines:
-      node: '>=v10.22.0'
-    resolution:
-      integrity: sha512-SNDRsb5gLuDd2PL83yCOQX6pE7gevC79UPFx+GLbLfw6jGnnbO9/tlL76MLD8MOViqGbo7ZicjChO9Gn+7tHhA==
   /@commitlint/ensure/11.0.0:
     dependencies:
       '@commitlint/types': 11.0.0
@@ -1188,6 +1180,6 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
-  '@commitlint/config-conventional': ^11.0.0
   '@organon/commitlint-config': 'link:./commitlint-config'
   commitlint: ^11.0.0
+  conventional-changelog-conventionalcommits: ^4.5.0

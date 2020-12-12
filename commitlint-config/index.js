@@ -58,8 +58,6 @@ const miscRules = {
 const rules = {...bodyRules, ...footerRules, ...headerRules, ...scopeRules, ...subjectRules, ...typeRules};
 
 module.exports = {
-  "extends": [
-    "@commitlint/config-conventional"
-  ],
+  parserPreset: "conventional-changelog-conventionalcommits",
   rules
 };
