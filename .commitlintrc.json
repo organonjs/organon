@@ -1,5 +1,5 @@
 {
   "extends": [
-    "./commitlint-config-organon.js"
+    "@organon/commitlint-config"
   ]
 }

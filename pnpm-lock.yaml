@@ -1,5 +1,6 @@
 devDependencies:
   '@commitlint/config-conventional': 11.0.0
+  '@organon/commitlint-config': 'link:commitlint-config'
   commitlint: 11.0.0
 lockfileVersion: 5.2
 packages:
@@ -1188,4 +1189,5 @@ packages:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
   '@commitlint/config-conventional': ^11.0.0
+  '@organon/commitlint-config': 'link:./commitlint-config'
   commitlint: ^11.0.0
