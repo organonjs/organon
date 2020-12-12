@@ -6,7 +6,7 @@ const bodyRules = {
   // "body-full-stop": [2, "always", "."], doc out of sync with @commitlint/cli@11.0.0
   "body-leading-blank": [2, "always"],
   "body-max-length": [2, "always", Infinity],
-  "body-max-line-length": [2, "always", 100],
+  "body-max-line-length": [2, "always", 72],
   "body-min-length": [2, "always", 0],
 }
 	
@@ -20,7 +20,7 @@ const footerRules = {
 const headerRules = {
   "header-case": [2, "always", "lower-case"],
   "header-full-stop": [2, "never", "."],
-  "header-max-length": [2, "always", 100],
+  "header-max-length": bodyRules["body-max-line-length"],
   "header-min-length": [2, "always", 0],
 }
 
