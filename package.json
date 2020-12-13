@@ -3,6 +3,7 @@
 		"@organon/commitlint-config": "link:./commitlint-config",
 		"commitlint": "^11.0.0",
 		"conventional-changelog-organon": "link:./conventional-changelog",
+		"eslint": "^7.15.0",
 		"husky": "^4.3.5"
 	}
 }

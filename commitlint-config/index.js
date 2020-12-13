@@ -61,10 +61,11 @@ const typeRules = {
   "type-min-length": [2, "always", 2],
 }
 
+/* Unused rules - the only 2 according to doc; keep them for reference
 const miscRules = {
   "references-empty": [2, "never"],
   "signed-off-by": [2, "always", "Signed-off-by:"]
-}
+} */
 
 const rules = {...bodyRules, ...footerRules, ...headerRules, ...scopeRules, ...subjectRules, ...typeRules};
 
