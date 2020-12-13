@@ -1,6 +1,7 @@
 {
   "main": "./index.js",
   "dependencies": {
-    "conventional-changelog-conventionalcommits": "^4.5.0"
+    "conventional-changelog-conventionalcommits": "^4.5.0",
+    "@organon/emojis": "link:../emojis"
   }
 }

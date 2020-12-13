@@ -1,4 +1,8 @@
 const getPresetOptions = require("conventional-changelog-conventionalcommits");
+const emojiMap = require("@organon/emojis");
+
+const emojiCodes = Array.from(emojiMap.values());
+const headerPattern = new RegExp(`^([ \\w${emojiCodes.join()}]*)(?:\\((.*)\\))?!?: (.*)$`, "u");
 
 module.exports = async (parameter) => {
   const loaded = await new Promise((resolve) => {
@@ -9,7 +13,8 @@ module.exports = async (parameter) => {
   })
 
   if (typeof loaded.parserOpts === "object") {
-    loaded.parserOpts.headerPattern = /^([ \w👷💚📝✨🐛⚡️♻️⏪✅🎨]*)(?:\((.*)\))?!?: (.*)$/u;
+    loaded.parserOpts.headerPattern = headerPattern;
   }
+
   return loaded;
 }
