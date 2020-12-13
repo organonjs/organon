@@ -1,4 +1,5 @@
 dependencies:
+  '@organon/emojis': 'link:../emojis'
   conventional-changelog-conventionalcommits: 4.5.0
 lockfileVersion: 5.2
 packages:
@@ -49,4 +50,5 @@ packages:
     resolution:
       integrity: sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 specifiers:
+  '@organon/emojis': 'link:../emojis'
   conventional-changelog-conventionalcommits: ^4.5.0
