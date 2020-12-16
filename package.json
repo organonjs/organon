@@ -1,8 +1,8 @@
 {
 	"devDependencies": {
-		"@organon/commitlint-config": "link:./commitlint-config",
+		"@organon/commitlint-config": "link:./packages/commitlint-config",
 		"commitlint": "^11.0.0",
-		"conventional-changelog-organon": "link:./conventional-changelog",
+		"conventional-changelog-organon": "link:./packages/conventional-changelog",
 		"eslint": "^7.15.0",
 		"eslint-config-prettier": "^7.0.0",
 		"eslint-plugin-jest": "^24.1.3",
