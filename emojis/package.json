@@ -1,3 +1,6 @@
 {
-  "main": "./index.js"
+  "main": "./index.js",
+  "devDependencies": {
+    "emoji-regex": "^9.2.0"
+  }
 }
