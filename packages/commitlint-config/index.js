@@ -46,7 +46,7 @@ let types = [
   "📝 docs",
   "✨ feat",
   "🐛 fix",
-  "⚡️ perf",
+  "⚡ perf",
   "♻️ refactor",
   "⏪ revert",
   "🎨 style",
