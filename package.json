@@ -4,6 +4,9 @@
 		"commitlint": "^11.0.0",
 		"conventional-changelog-organon": "link:./conventional-changelog",
 		"eslint": "^7.15.0",
-		"husky": "^4.3.5"
+		"eslint-config-prettier": "^7.0.0",
+		"eslint-plugin-prettier": "^3.2.0",
+		"husky": "^4.3.5",
+		"prettier": "^2.2.1"
 	}
 }

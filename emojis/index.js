@@ -8,7 +8,7 @@ const emojiMap = new Map([
   ["♻️", "\u267b"],
   ["⏪", "\u23ea"],
   ["🎨", "\ud83c\udfa8"],
-  ["✅", "\u2705"]
+  ["✅", "\u2705"],
 ]);
 
 module.exports = emojiMap;
