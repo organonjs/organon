@@ -8,7 +8,7 @@ const emojiPresentationMap = new Map([
   ["✨", "\u2728"],
   ["🐛", "\ud83d\udc1b"],
   ["⚡", "\u26A1"],
-  ["♻", "\u267b\ufe0f"], // Force Emoji Presentation, see https://www.unicode.org/emoji/charts-13.1/text-style.html, row "2002 ⊖ Dings"
+  ["♻", "\u267b\ufe0f"], // Force Emoji Presentation "♻️", see https://www.unicode.org/emoji/charts-13.1/text-style.html, row "2002 ⊖ Dings"
   ["⏪", "\u23ea"],
   ["🎨", "\ud83c\udfa8"],
   ["✅", "\u2705"],
