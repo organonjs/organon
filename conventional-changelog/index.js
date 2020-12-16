@@ -1,9 +1,10 @@
 const getPresetOptions = require("conventional-changelog-conventionalcommits");
-const emojiMap = require("@organon/emojis");
+const emojiPresentationMap = require("@organon/emojis");
 
-const emojiCodes = Array.from(emojiMap.values());
+const emojis = Array.from(emojiPresentationMap.values());
+
 const headerPattern = new RegExp(
-  `^([ \\w${emojiCodes.join()}]*)(?:\\((.*)\\))?!?: (.*)$`,
+  `^([ \\w${emojis.join()}]*)(?:\\((.*)\\))?!?: (.*)$`,
   "u"
 );
 
