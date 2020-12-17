@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "declaration": false,
     "strict": true,
+    "esModuleInterop": true,
     "outDir": "cjs"
   },
   "include": [
