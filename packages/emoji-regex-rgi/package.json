@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "module": "lib/index.js",
+  "main": "cjs/index.js",
+  "types": "lib/index.d.ts",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
