@@ -1,6 +1,9 @@
 {
 	"devDependencies": {
 		"@organon/commitlint-config": "link:./packages/commitlint-config",
+		"@types/jest": "^26.0.19",
+		"@typescript-eslint/eslint-plugin": "^4.10.0",
+		"@typescript-eslint/parser": "^4.10.0",
 		"commitlint": "^11.0.0",
 		"conventional-changelog-organon": "link:./packages/conventional-changelog",
 		"eslint": "^7.15.0",
