@@ -1,6 +1,7 @@
 {
   "main": "./index.js",
   "devDependencies": {
-    "emoji-regex": "^9.2.0"
+    "@organon/emoji-regex-rgi": "link:../emoji-regex-rgi",
+    "jest": "^26.6.3"
   }
 }
