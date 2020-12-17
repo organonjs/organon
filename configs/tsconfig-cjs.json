@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": false,
+    "strict": true,
+    "outDir": "cjs"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "**/__tests__"
+  ]
+}
