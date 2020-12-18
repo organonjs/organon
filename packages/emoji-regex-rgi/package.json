@@ -1,4 +1,5 @@
 {
+  "name": "@organon/emoji-regex-rgi",
   "type": "commonjs",
   "main": "cjs/index.js",
   "module": "lib/index.js",

@@ -1,4 +1,5 @@
 {
+  "name": "conventional-changelog-organon",
   "main": "./index.js",
   "dependencies": {
     "conventional-changelog-conventionalcommits": "^4.5.0",

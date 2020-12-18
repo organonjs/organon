@@ -1,4 +1,5 @@
 {
+  "name": "@organon/emojis",
   "type": "commonjs",
   "main": "cjs/index.js",
   "module": "lib/index.js",

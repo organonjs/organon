@@ -1,4 +1,5 @@
 {
+	"name": "organon",
 	"devDependencies": {
 		"@organon/commitlint-config": "link:./packages/commitlint-config",
 		"@types/jest": "^26.0.19",
