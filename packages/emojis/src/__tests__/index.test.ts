@@ -1,10 +1,10 @@
-const emojiPresentationMap = require("..");
-const emojiPresentationRegex = require("emoji-regex/RGI_Emoji.js");
+import { emojiPresentationMap } from "..";
+import { emojiRegexRGI } from "@organon/emoji-regex-rgi";
 
 describe("Emoji presentation map", () => {
   for (const [emoji, presentation] of emojiPresentationMap) {
     it(`${presentation} is a proper emoji presentation"`, () => {
-      expect(emojiPresentationRegex().test(presentation)).toBe(true);
+      expect(emojiRegexRGI().test(presentation)).toBe(true);
     });
 
     if (emoji === "♻") {

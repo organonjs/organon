@@ -1,7 +1,7 @@
 // emoji code points
 // keys: presentation is default (may be text)
 // values: presentation is emoji
-const emojiPresentationMap = new Map([
+export const emojiPresentationMap = new Map([
   ["👷", "\ud83d\udc77"],
   ["💚", "\ud83d\udc9a"],
   ["📝", "\ud83d\udcdd"],
@@ -13,5 +13,3 @@ const emojiPresentationMap = new Map([
   ["🎨", "\ud83c\udfa8"],
   ["✅", "\u2705"],
 ]);
-
-module.exports = emojiPresentationMap;

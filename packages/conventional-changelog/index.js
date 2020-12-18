@@ -1,5 +1,5 @@
 const getPresetOptions = require("conventional-changelog-conventionalcommits");
-const emojiPresentationMap = require("@organon/emojis");
+const { emojiPresentationMap } = require("@organon/emojis");
 
 const emojis = Array.from(emojiPresentationMap.values());
 
