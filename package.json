@@ -1,12 +1,13 @@
 {
 	"name": "organon",
+	"version": "0.0.1",
 	"devDependencies": {
-		"@organon/commitlint-config": "link:./packages/commitlint-config",
+		"@organon/commitlint-config": "^0.0.1",
 		"@types/jest": "^26.0.19",
 		"@typescript-eslint/eslint-plugin": "^4.10.0",
 		"@typescript-eslint/parser": "^4.10.0",
 		"commitlint": "^11.0.0",
-		"conventional-changelog-organon": "link:./packages/conventional-changelog",
+		"conventional-changelog-organon": "^0.0.1",
 		"eslint": "^7.15.0",
 		"eslint-config-prettier": "^7.0.0",
 		"eslint-plugin-jest": "^24.1.3",
