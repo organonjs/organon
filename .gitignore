@@ -1,6 +1,9 @@
 # Custom
 private
 
+# RushStack
+.heft
+
 # NodeJs
 node_modules
 
