@@ -1,6 +1,9 @@
 # Custom
 private
 
+# Build
+lib
+
 # RushStack
 .heft
 
