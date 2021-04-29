@@ -1,0 +1,15 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@rush-temp/organon-node-rig': file:./projects/organon-node-rig.tgz
+
+dependencies:
+  '@rush-temp/organon-node-rig': file:projects/organon-node-rig.tgz
+
+packages:
+
+  file:projects/organon-node-rig.tgz:
+    resolution: {integrity: sha512-q2tMjx/MCIZQvCbm/HH+FfcoMlGtNP/xBeHxaLZpVjEE+8K2yl319pkDKa/2T6Bi3GpiiLMlx4aBMvqxHtmopA==, tarball: file:projects/organon-node-rig.tgz}
+    name: '@rush-temp/organon-node-rig'
+    version: 0.0.0
+    dev: false
