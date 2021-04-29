@@ -14,6 +14,7 @@
     "**/lib-amd": true,
     "**/test/**/temp": false,
     "**/temp": true,
-    "**/coverage": true
+    "**/coverage": true,
+    "**/private": true
   }
 }
