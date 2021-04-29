@@ -1,0 +1,24 @@
+{
+  "name": "@organon/organon-node-rig",
+  "version": "0.0.1",
+  "description": "A rig package for Node.js projects",
+  "keywords": [
+    "rig",
+    "config"
+  ],
+  "license": "MIT",
+  "files": [
+    "profiles"
+  ],
+  "author": {
+    "name": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organonjs/organon/tree/main/rigs/organon-node-rig"
+  },
+  "scripts": {
+    "build": ""
+  }
+}
