@@ -87,7 +87,7 @@
      *
      * The default value is false.
      */
-    "preventManualShrinkwrapChanges": true
+    "preventManualShrinkwrapChanges": true,
     /**
      * If true, then `rush install` will use the PNPM workspaces feature to perform the
      * install.
@@ -102,7 +102,7 @@
      *
      * This option is experimental. The default value is false.
      */
-    // "useWorkspaces": true
+    "useWorkspaces": true
   },
   /**
    * Older releases of the Node.js engine may be missing features required by your system.
@@ -360,6 +360,10 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
+    {
+      "packageName": "@organon/emoji-regex-rgi",
+      "projectFolder": "misc/emoji-regex-rgi"
+    },
     {
       "packageName": "@organon/organon-node-rig",
       "projectFolder": "rigs/organon-node-rig"
