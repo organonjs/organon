@@ -7,7 +7,8 @@ describe("Emoji presentation map", () => {
       expect(emojiRegexRGI().test(presentation)).toBe(true);
     });
 
-    if (emoji === "♻") {
+    // If emoji is not a proper emoji presentation, like ♻ instead of ♻️
+    if (!emojiRegexRGI().test(emoji)) {
       it(`${emoji} !== ${presentation}`, () => {
         expect(emoji).not.toStrictEqual(presentation);
       });
@@ -25,8 +26,10 @@ describe("Emoji presentation map", () => {
     }
 
     it(`${emoji} may be used safely in a regex with flag "u"`, () => {
-      const regex = new RegExp(`^[${emoji}]$`, "u");
-      expect(regex.test(emoji)).toBe(true);
+      const regex1 = new RegExp(`^[${emoji}]$`, "u");
+      const regex2 = new RegExp(`[${emoji}]`, "u");
+      expect(regex1.test(emoji)).toBe(true);
+      expect(regex2.test(emoji)).toBe(true);
     });
   }
 });
