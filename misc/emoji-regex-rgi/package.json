@@ -13,7 +13,9 @@
   "types": "lib/index.d.ts",
   "files": [
     "lib",
-    "cjs"
+    "!lib/**/*.map",
+    "cjs",
+    "!cjs/**/*.map"
   ],
   "author": {
     "name": "Jason Lenoble",
