@@ -361,6 +361,10 @@
    */
   "projects": [
     {
+      "packageName": "@organon/emoji-presentation-map",
+      "projectFolder": "misc/emoji-presentation-map"
+    },
+    {
       "packageName": "@organon/emoji-regex-rgi",
       "projectFolder": "misc/emoji-regex-rgi"
     },
