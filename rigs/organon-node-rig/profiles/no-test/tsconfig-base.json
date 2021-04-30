@@ -1,17 +1,6 @@
 {
-  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "../default/tsconfig-base.json",
   "compilerOptions": {
-    "target": "es2020",
-    "module": "es2020",
-    "moduleResolution": "node",
-    "declaration": true,
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "../../../../../lib",
     "types": []
-  },
-  "include": [
-    "../../../../../src"
-  ]
+  }
 }
