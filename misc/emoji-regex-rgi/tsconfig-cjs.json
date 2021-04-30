@@ -1,3 +1,0 @@
-{
-  "extends": "./node_modules/@organon/organon-node-rig/profiles/no-test/tsconfig-cjs.json"
-}
