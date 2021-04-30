@@ -2,6 +2,7 @@
 private
 lib
 cjs
+**/temp/build
 
 # Logs
 *.log
