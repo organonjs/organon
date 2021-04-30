@@ -8,12 +8,12 @@
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "lib"
+    "outDir": "../../../../../lib"
   },
   "include": [
-    "src"
+    "../../../../../src"
   ],
   "exclude": [
-    "**/__tests__"
+    "../../../../../**/__tests__"
   ]
 }
