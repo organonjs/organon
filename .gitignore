@@ -1,5 +1,7 @@
 # Custom
 private
+lib
+cjs
 
 # Logs
 *.log
@@ -66,3 +68,6 @@ common/deploy/
 common/temp/
 common/autoinstallers/*/.npmrc
 **/.rush/temp/
+
+# Heft temporary files
+**/.heft/build-cache
