@@ -1,5 +1,5 @@
 {
-  "extends": "../default/tsconfig-cjs.json",
+  "extends": "./tsconfig-base.json",
   "compilerOptions": {
     "types": []
   }
