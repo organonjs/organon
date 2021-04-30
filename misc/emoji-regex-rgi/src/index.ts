@@ -1,6 +1,6 @@
 // RGI means "Recommended for General Interchange". RGI emojis are likely to be
 // supported by all popular platforms.
-
+//
 // Regexp from https://github.com/mathiasbynens/emoji-regex/blob/master/RGI_Emoji.js v9.2.0
 // © 2020 Mathias Bynens, MIT License
 
