@@ -5,6 +5,8 @@
     "module": "es2020",
     "moduleResolution": "node",
     "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
