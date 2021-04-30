@@ -1,0 +1,36 @@
+{
+  "name": "@organon/emoji-presentation-map",
+  "version": "0.0.1",
+  "description": "A Map for some utf8 characters to their emoji presentation unicode sequences",
+  "keywords": [
+    "emoji",
+    "presentation",
+    "map"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "cjs/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "cjs"
+  ],
+  "author": {
+    "name": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organonjs/organon/tree/main/misc/emoji-presentation-map"
+  },
+  "scripts": {
+    "build": "heft test --clean"
+  },
+  "devDependencies": {
+    "@organon/emoji-regex-rgi": "workspace:*",
+    "@organon/organon-node-rig": "workspace:*",
+    "@rushstack/heft": "~0.30.0",
+    "@types/heft-jest": "~1.0.2"
+  }
+}
