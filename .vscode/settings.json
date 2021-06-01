@@ -8,13 +8,11 @@
   "files.trimTrailingWhitespace": true,
   "search.exclude": {
     "**/node_modules": true,
-    "**/bower_components": true,
-    "**/dist": true,
+    "**/cjs": true,
     "**/lib": true,
-    "**/lib-amd": true,
-    "**/test/**/temp": false,
     "**/temp": true,
-    "**/coverage": true,
     "**/private": true
-  }
+  },
+  "terminal.integrated.fontFamily": "Source Code Pro, monospace",
+  "terminal.integrated.fontSize": 15
 }
