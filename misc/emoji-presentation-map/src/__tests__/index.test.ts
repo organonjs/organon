@@ -14,7 +14,9 @@ describe("Emoji presentation map", () => {
       });
 
       it(`${presentation} requires extra care when matching with a regex`, () => {
+        // eslint-disable-next-line @rushstack/security/no-unsafe-regexp
         const regex1 = new RegExp(`^[${presentation}]$`, "u");
+        // eslint-disable-next-line @rushstack/security/no-unsafe-regexp
         const regex2 = new RegExp(`[${presentation}]`, "u");
         expect(regex1.test(presentation)).toBe(false);
         expect(regex2.test(presentation)).toBe(true);
@@ -26,7 +28,9 @@ describe("Emoji presentation map", () => {
     }
 
     it(`${emoji} may be used safely in a regex with flag "u"`, () => {
+      // eslint-disable-next-line @rushstack/security/no-unsafe-regexp
       const regex1 = new RegExp(`^[${emoji}]$`, "u");
+      // eslint-disable-next-line @rushstack/security/no-unsafe-regexp
       const regex2 = new RegExp(`[${emoji}]`, "u");
       expect(regex1.test(emoji)).toBe(true);
       expect(regex2.test(emoji)).toBe(true);
