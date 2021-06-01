@@ -28,11 +28,15 @@ module.exports = {
  */
 function readPackage(packageJson, context) {
 
-  // // The karma types have a missing dependency on typings from the log4js package.
-  // if (packageJson.name === '@types/karma') {
-  //  context.log('Fixed up dependencies for @types/karma');
-  //  packageJson.dependencies['log4js'] = '0.6.38';
-  // }
+  if (packageJson.peerDependencies !== undefined) {
+    // These packages are provided via a rig profile, which doesn't play well with the module resolution
+    ["typescript", "eslint"].forEach(pkg => {
+      if (typeof packageJson.peerDependencies[pkg] === "string") {
+        context.log(`delete peerDependencies ${pkg}@${packageJson.peerDependencies[pkg]} for package ${packageJson.name}@${packageJson.version}`);
+        delete packageJson.peerDependencies[pkg]
+      }
+    });
+  }
 
   return packageJson;
 }
