@@ -361,6 +361,10 @@
    */
   "projects": [
     {
+      "packageName": "@organon/commitlint-config",
+      "projectFolder": "tooling/commitlint-config"
+    },
+    {
       "packageName": "@organon/emoji-presentation-map",
       "projectFolder": "misc/emoji-presentation-map"
     },

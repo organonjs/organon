@@ -1,0 +1,4 @@
+{
+  "$schema": "https://developer.microsoft.com/en-US/json-schemas/rig-package/rig.schema.json",
+  "rigPackageName": "@organon/organon-node-rig"
+}
