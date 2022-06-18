@@ -22,12 +22,12 @@
   "additionalModuleKindsToEmit": [
     {
       /**
-        * (Required) Must be one of "commonjs", "amd", "umd", "system", "es2015", "esnext"
-        */
+       * (Required) Must be one of "commonjs", "amd", "umd", "system", "es2015", "esnext"
+       */
       "moduleKind": "commonjs",
       /**
-        * (Required) The name of the folder where the output will be written.
-        */
+       * (Required) The name of the folder where the output will be written.
+       */
       "outFolderName": "cjs"
     }
   ],
