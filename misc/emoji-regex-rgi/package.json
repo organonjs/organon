@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "@organon/organon-node-rig": "workspace:*",
-    "@rushstack/heft": "~0.30.0"
+    "@rushstack/heft": "~0.45.8"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "heftPlugins": [
+    {
+      "plugin": "@rushstack/heft-jest-plugin"
+    }
+  ]
+}
