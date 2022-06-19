@@ -375,6 +375,10 @@
     {
       "packageName": "@organon/organon-node-rig",
       "projectFolder": "rigs/organon-node-rig"
+    },
+    {
+      "packageName": "conventional-changelog-organon",
+      "projectFolder": "tooling/conventional-changelog"
       //   /**
       //    * An optional category for usage in the "browser-approved-packages.json"
       //    * and "nonbrowser-approved-packages.json" files.  The value must be one of the
