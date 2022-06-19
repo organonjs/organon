@@ -40,15 +40,23 @@ importers:
   ../../tooling/commitlint-config:
     specifiers:
       '@commitlint/types': ~17.0.0
+      '@organon/emoji-presentation-map': workspace:*
+      '@organon/emoji-regex-rgi': workspace:*
       '@organon/organon-node-rig': workspace:*
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
+      '@rushstack/heft-jest-plugin': ~0.3.8
+      '@types/heft-jest': ~1.0.3
       eslint: ~8.18.0
     devDependencies:
       '@commitlint/types': 17.0.0
+      '@organon/emoji-presentation-map': link:../../misc/emoji-presentation-map
+      '@organon/emoji-regex-rgi': link:../../misc/emoji-regex-rgi
       '@organon/organon-node-rig': link:../../rigs/organon-node-rig
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8
+      '@rushstack/heft-jest-plugin': 0.3.8_@rushstack+heft@0.45.8
+      '@types/heft-jest': 1.0.3
       eslint: 8.18.0
 
   ../../tooling/conventional-changelog:
