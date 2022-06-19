@@ -52,9 +52,9 @@ const rules: RulesConfig = {
   "body-case": [0, "always", "lower-case"],
 
   // Full stop
-  "header-full-stop": [2, "never"],
-  "subject-full-stop": [2, "never"],
-  // "body-full-stop": [2, "always"], doc out of sync with @commitlint/cli@11.0.0
+  "header-full-stop": [2, "never", "."],
+  "subject-full-stop": [2, "never", "."],
+  "body-full-stop": [2, "always", "."],
 
   // Empty
   "type-empty": [2, "never"],
@@ -69,7 +69,8 @@ const rules: RulesConfig = {
   "scope-enum": [2, "always", []],
 
   // Misc
-  "signed-off-by": [0, "always" /* , "Signed-off-by:" */], // type inconsistent with @commitlint/cli@11.0.0 doc
+  "signed-off-by": [0, "always", "Signed-off-by:"],
+  "trailer-exists": [0, "always", "Signed-off-by:"],
 };
 
 const config: { parserPreset: string; rules: RulesConfig } = {

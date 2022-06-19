@@ -29,7 +29,7 @@
     "build": "heft test --clean"
   },
   "devDependencies": {
-    "@commitlint/types": "^11.0.0",
+    "@commitlint/types": "^17.0.0",
     "@organon/organon-node-rig": "workspace:*",
     "@rushstack/eslint-config": "~2.6.1",
     "@rushstack/heft": "~0.45.8",
