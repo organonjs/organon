@@ -25,23 +25,23 @@ describe("conventional-changelog-organon", () => {
         expect(headerPattern.test(commitHeader)).toBe(true);
       });
 
-      it(`header "${type}(Scope): description" is invalid`, () => {
+      it(`header "${type}(Scope): description" is valid`, () => {
         const commitHeader = type + "(Scope): description";
 
-        expect(headerPattern.test(commitHeader)).toBe(false);
+        expect(headerPattern.test(commitHeader)).toBe(true);
       });
 
-      it(`header "${type}(scope): Description" is invalid`, () => {
-        const commitHeader = type + "(scope): Description";
+      it(`header "${type}(scope): Long description" is valid`, () => {
+        const commitHeader = type + "(scope): Long description";
 
-        expect(headerPattern.test(commitHeader)).toBe(false);
+        expect(headerPattern.test(commitHeader)).toBe(true);
       });
     });
 
     it(`header pattern exactly checks for all emojis in the emoji presentation map`, () => {
       const emojis = Array.from(emojiPresentationMap.values()).join("");
 
-      let truncatedSource: string = headerPattern.source.substring(10);
+      let truncatedSource: string = headerPattern.source.substring(3);
       truncatedSource = truncatedSource.substring(0, truncatedSource.indexOf("]"));
       truncatedSource = truncatedSource.replace(/.\\ufe0f/g, (match: string): string => {
         return emojiPresentationMap.get(match[0]) || "";

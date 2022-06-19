@@ -1,6 +1,6 @@
 {
   "name": "conventional-changelog-organon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A wrapper to use emojis with conventional-changelog and commitlint",
   "keywords": [
     "commitlint",
@@ -10,14 +10,11 @@
   ],
   "license": "MIT",
   "type": "commonjs",
-  "main": "cjs/index.js",
-  "module": "lib/index.js",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib",
-    "!lib/**/*.map",
-    "cjs",
-    "!cjs/**/*.map"
+    "!lib/**/__tests__"
   ],
   "author": {
     "name": "Jason Lenoble",
