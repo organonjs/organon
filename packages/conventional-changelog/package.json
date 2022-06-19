@@ -1,9 +1,0 @@
-{
-  "name": "conventional-changelog-organon",
-  "version": "0.0.1",
-  "main": "./index.js",
-  "dependencies": {
-    "conventional-changelog-conventionalcommits": "^4.5.0",
-    "@organon/emojis": "^0.0.1"
-  }
-}

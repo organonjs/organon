@@ -1,0 +1,35 @@
+{
+  "name": "@organon/emoji-regex-rgi",
+  "version": "0.0.1",
+  "description": "A generic regexp to match emojis",
+  "keywords": [
+    "emoji",
+    "regex"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "cjs/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "!lib/**/*.map",
+    "cjs",
+    "!cjs/**/*.map"
+  ],
+  "author": {
+    "name": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organonjs/organon/tree/main/misc/emoji-regex-rgi"
+  },
+  "scripts": {
+    "build": "heft build --clean"
+  },
+  "devDependencies": {
+    "@organon/organon-node-rig": "workspace:*",
+    "@rushstack/heft": "~0.45.8"
+  }
+}

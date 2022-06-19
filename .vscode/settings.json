@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.associations": {
+    "**/package.json": "json",
+    "**/*.json": "jsonc"
+  },
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/cjs": true,
+    "**/lib": true,
+    "**/temp": true,
+    "**/private": true
+  },
+  "terminal.integrated.fontFamily": "Source Code Pro, monospace",
+  "terminal.integrated.fontSize": 15
+}
