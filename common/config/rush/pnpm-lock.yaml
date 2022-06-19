@@ -62,6 +62,7 @@ importers:
   ../../tooling/conventional-changelog:
     specifiers:
       '@organon/commitlint-config': workspace:*
+      '@organon/emoji-presentation-map': workspace:*
       '@organon/organon-node-rig': workspace:*
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
@@ -75,6 +76,7 @@ importers:
       conventional-changelog-conventionalcommits: 5.0.0
     devDependencies:
       '@organon/commitlint-config': link:../commitlint-config
+      '@organon/emoji-presentation-map': link:../../misc/emoji-presentation-map
       '@organon/organon-node-rig': link:../../rigs/organon-node-rig
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8

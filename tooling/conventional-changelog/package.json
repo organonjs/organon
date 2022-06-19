@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@organon/commitlint-config": "workspace:*",
+    "@organon/emoji-presentation-map": "workspace:*",
     "@organon/organon-node-rig": "workspace:*",
     "@rushstack/eslint-config": "~2.6.1",
     "@rushstack/heft": "~0.45.8",
