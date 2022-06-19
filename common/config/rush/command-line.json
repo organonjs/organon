@@ -21,6 +21,14 @@
 
       // This will invoke common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
       "shellCommand": "pretty-quick --staged"
+    },
+    {
+      "name": "commitlint",
+      "commandKind": "global",
+      "summary": "Used by the pre-commit Git hook. This command invokes commitlint to ensure that the commit messages meet the conventional commit format",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-commitlint",
+      "shellCommand": "commitlint"
     }
 
     // {
@@ -185,6 +193,24 @@
    * For example, you might define a "--production" parameter for the "rush build" command.
    */
   "parameters": [
+    {
+      "parameterKind": "string",
+      "argumentName": "MESSAGE",
+      "longName": "--edit",
+      "description": "",
+      "associatedCommands": [
+        "commitlint"
+      ]
+    },
+    {
+      "parameterKind": "string",
+      "argumentName": "FILEPATH",
+      "longName": "--config",
+      "description": "",
+      "associatedCommands": [
+        "commitlint"
+      ]
+    }
     // {
     //   /**
     //    * (Required) Determines the type of custom parameter.
