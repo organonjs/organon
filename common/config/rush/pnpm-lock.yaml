@@ -61,21 +61,25 @@ importers:
 
   ../../tooling/conventional-changelog:
     specifiers:
-      '@organon/emoji-presentation-map': workspace:*
+      '@organon/commitlint-config': workspace:*
       '@organon/organon-node-rig': workspace:*
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
+      '@rushstack/heft-jest-plugin': ~0.3.8
       '@types/conventional-changelog-core': ~4.2.1
+      '@types/heft-jest': ~1.0.3
       conventional-changelog-conventionalcommits: ~5.0.0
       eslint: ~8.18.0
     dependencies:
-      '@organon/emoji-presentation-map': link:../../misc/emoji-presentation-map
       '@types/conventional-changelog-core': 4.2.1
       conventional-changelog-conventionalcommits: 5.0.0
     devDependencies:
+      '@organon/commitlint-config': link:../commitlint-config
       '@organon/organon-node-rig': link:../../rigs/organon-node-rig
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8
+      '@rushstack/heft-jest-plugin': 0.3.8_@rushstack+heft@0.45.8
+      '@types/heft-jest': 1.0.3
       eslint: 8.18.0
 
 packages:

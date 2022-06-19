@@ -32,13 +32,15 @@
   },
   "dependencies": {
     "@types/conventional-changelog-core": "~4.2.1",
-    "@organon/emoji-presentation-map": "workspace:*",
     "conventional-changelog-conventionalcommits": "~5.0.0"
   },
   "devDependencies": {
+    "@organon/commitlint-config": "workspace:*",
     "@organon/organon-node-rig": "workspace:*",
     "@rushstack/eslint-config": "~2.6.1",
     "@rushstack/heft": "~0.45.8",
+    "@rushstack/heft-jest-plugin": "~0.3.8",
+    "@types/heft-jest": "~1.0.3",
     "eslint": "~8.18.0"
   }
 }
