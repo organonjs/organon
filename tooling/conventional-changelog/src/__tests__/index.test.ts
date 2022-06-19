@@ -2,7 +2,7 @@ import config from "@organon/commitlint-config";
 import { emojiPresentationMap } from "@organon/emoji-presentation-map";
 import { headerPattern } from "..";
 
-describe("commitlint config", () => {
+describe("conventional-changelog-organon", () => {
   const tuple = config.rules["type-enum"];
 
   // Make sure something bad happens if no tests are set
