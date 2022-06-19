@@ -13,12 +13,12 @@ interface IPresetOptions {
 // headerPattern is <commitType>(<commitScope>): <commitHeaderMessage>. The matching
 // is kept loose for <commitType>, so there could be emojis anywhere.
 // \ufe0f is the emoji presentation character switch, we do require it in the pattern
-export const headerPattern: RegExp = // eslint-disable-next-line no-misleading-character-class
+const headerPattern: RegExp = // eslint-disable-next-line no-misleading-character-class
   /^([ a-z0-9👷💚📝✨🐛⚡♻\ufe0f⏪🎨✅]*)(?:\(([a-z0-9]*)\))?!?: ([a-z0-9]*)$/u;
 
 // This replaces the header pattern to be fed to the conventional changelog parser
 // and allows for emojis in the header type
-export default async (parameter: (_: unknown, arg: IPresetOptions) => void): Promise<IPresetOptions> => {
+const exportFunc = async (parameter: (_: unknown, arg: IPresetOptions) => void): Promise<IPresetOptions> => {
   const loaded: IPresetOptions = await new Promise((resolve) => {
     // @ts-ignore
     getPresetOptions((any, arg: IPresetOptions) => {
@@ -33,3 +33,7 @@ export default async (parameter: (_: unknown, arg: IPresetOptions) => void): Pro
 
   return loaded;
 };
+
+exportFunc.headerPattern = headerPattern;
+
+export = exportFunc;
