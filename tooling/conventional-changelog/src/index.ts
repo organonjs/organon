@@ -2,7 +2,6 @@
 import getPresetOptions from "conventional-changelog-conventionalcommits";
 import conventionalChangelogCore from "conventional-changelog-core";
 import { ParserOptions, WriterOptions, Options as RecommendedBumpOptions } from "conventional-changelog-core";
-import { emojiPresentationMap } from "@organon/emoji-presentation-map";
 
 interface IPresetOptions {
   conventionalChangelog: typeof conventionalChangelogCore;
@@ -11,11 +10,11 @@ interface IPresetOptions {
   writerOpts: WriterOptions;
 }
 
-const emojis: Array<string> = Array.from(emojiPresentationMap.values());
-
-// Pattern is <commitType>(<commitScope>): <commitHeaderMessage>. The matching
+// headerPattern is <commitType>(<commitScope>): <commitHeaderMessage>. The matching
 // is kept loose for <commitType>, so there could be emojis anywhere.
-const headerPattern: RegExp = new RegExp(`^([ \\w${emojis.join()}]*)(?:\\((.*)\\))?!?: (.*)$`, "u");
+// \ufe0f is the emoji presentation character switch, we do require it in the pattern
+// eslint-disable-next-line no-misleading-character-class
+export const headerPattern: RegExp = /^([ \w👷💚📝✨🐛⚡♻\ufe0f⏪🎨✅]*)(?:\((.*)\))?!?: (.*)$/u;
 
 // This replaces the header pattern to be fed to the conventional changelog parser
 // and allows for emojis in the header type
