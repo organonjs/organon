@@ -33,7 +33,6 @@
     "@organon/emoji-regex-rgi": "workspace:*",
     "@organon/organon-node-rig": "workspace:*",
     "@rushstack/heft": "~0.45.8",
-    "@rushstack/heft-jest-plugin": "~0.3.8",
     "@types/heft-jest": "~1.0.3"
   }
 }
