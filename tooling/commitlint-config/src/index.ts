@@ -78,4 +78,4 @@ const config: { parserPreset: string; rules: RulesConfig } = {
   rules,
 };
 
-export default config;
+export = config;
