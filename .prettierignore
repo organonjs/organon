@@ -6,6 +6,7 @@
 private
 lib
 cjs
+dist
 **/temp
 
 # Logs
