@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "../../../../../lib",
+    "types": ["heft-jest", "webpack-env"]
+  },
+  "include": ["../../../../../src"]
+}

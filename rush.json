@@ -377,6 +377,10 @@
       "projectFolder": "rigs/organon-node-rig"
     },
     {
+      "packageName": "@organon/organon-web-rig",
+      "projectFolder": "rigs/organon-web-rig"
+    },
+    {
       "packageName": "conventional-changelog-organon",
       "projectFolder": "tooling/conventional-changelog"
       //   /**

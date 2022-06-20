@@ -1,0 +1,10 @@
+{
+  "heftPlugins": [
+    {
+      "plugin": "@rushstack/heft-jest-plugin"
+    },
+    {
+      "plugin": "@rushstack/heft-webpack5-plugin"
+    }
+  ]
+}
