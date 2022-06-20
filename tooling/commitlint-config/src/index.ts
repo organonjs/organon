@@ -6,6 +6,7 @@ import { RulesConfig } from "@commitlint/types";
 
 const types: string[] = [
   "👷 build",
+  "🔧 chore",
   "💚 ci",
   "📝 docs",
   "✨ feat",
