@@ -29,8 +29,14 @@
       "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-commitlint",
       "shellCommand": "commitlint"
+    },
+    {
+      "name": "changefiles",
+      "commandKind": "global",
+      "summary": "",
+      "autoinstallerName": "rush-changemanager",
+      "shellCommand": "node common/scripts/rush-changefiles.js"
     }
-
     // {
     //   /**
     //    * (Required) Determines the type of custom command.
@@ -198,18 +204,14 @@
       "argumentName": "MESSAGE",
       "longName": "--edit",
       "description": "",
-      "associatedCommands": [
-        "commitlint"
-      ]
+      "associatedCommands": ["commitlint"]
     },
     {
       "parameterKind": "string",
       "argumentName": "FILEPATH",
       "longName": "--config",
       "description": "",
-      "associatedCommands": [
-        "commitlint"
-      ]
+      "associatedCommands": ["commitlint"]
     }
     // {
     //   /**
