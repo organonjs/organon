@@ -3,6 +3,7 @@
 // values: presentation is emoji
 export const emojiPresentationMap: Map<string, string> = new Map([
   ["👷", "\ud83d\udc77"],
+  ["🔧", "\ud83d\udd27"],
   ["💚", "\ud83d\udc9a"],
   ["📝", "\ud83d\udcdd"],
   ["✨", "\u2728"],

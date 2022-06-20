@@ -82,9 +82,7 @@ common/autoinstallers/*/.npmrc
 #-------------------------------------------------------------------------------------------------------------------
 
 # Rush files
-common/changes/
-common/scripts/
-common/config/
+common/scripts/install-run*
 CHANGELOG.*
 
 # Package manager files

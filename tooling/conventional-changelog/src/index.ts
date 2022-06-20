@@ -14,7 +14,7 @@ interface IPresetOptions {
 // is kept loose for <commitType>, so there could be emojis anywhere.
 // \ufe0f is the emoji presentation character switch, we do require it in the pattern
 const headerPattern: RegExp = // eslint-disable-next-line no-misleading-character-class
-  /^([👷💚📝✨🐛⚡♻\ufe0f⏪🎨✅]{1,2} [a-z]+)(?:\((.*)\))?!?: (.*)$/u;
+  /^([👷🔧💚📝✨🐛⚡♻\ufe0f⏪🎨✅]{1,2} [a-z]+)(?:\((.*)\))?!?: (.*)$/u;
 
 // This replaces the header pattern to be fed to the conventional changelog parser
 // and allows for emojis in the header type

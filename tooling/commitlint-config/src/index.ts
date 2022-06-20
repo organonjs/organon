@@ -6,6 +6,7 @@ import { RulesConfig } from "@commitlint/types";
 
 const types: string[] = [
   "👷 build",
+  "🔧 chore",
   "💚 ci",
   "📝 docs",
   "✨ feat",
@@ -78,4 +79,4 @@ const config: { parserPreset: string; rules: RulesConfig } = {
   rules,
 };
 
-export default config;
+export = config;
