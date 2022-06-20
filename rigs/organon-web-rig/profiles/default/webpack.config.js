@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
  * If the "--production" command-line parameter is specified when invoking Heft, then the
  * "production" function parameter will be true.  You can use this to enable bundling optimizations.
  */
-function createWebpackConfig({ production }) {
+function createWebpackConfig({ production, dirname }) {
   const webpackConfig = {
     // Documentation: https://webpack.js.org/configuration/mode/
     mode: production ? "production" : "development",
@@ -28,13 +28,13 @@ function createWebpackConfig({ production }) {
       ],
     },
     entry: {
-      app: path.join(__dirname, "cjs", "index.js"),
+      app: path.join(dirname, "cjs", "index.js"),
 
       // Put these libraries in a separate vendor bundle
       vendor: ["react", "react-dom"],
     },
     output: {
-      path: path.join(__dirname, "dist"),
+      path: path.join(dirname, "dist"),
       filename: "[name]_[contenthash].js",
     },
     performance: {
@@ -58,4 +58,12 @@ function createWebpackConfig({ production }) {
   return webpackConfig;
 }
 
-module.exports = createWebpackConfig;
+const bindDirname = (dirname) =>
+  function ({ production }) {
+    return createWebpackConfig({ production, dirname });
+  };
+
+const mainExport = bindDirname(__dirname);
+mainExport.bindDirname = bindDirname;
+
+module.exports = mainExport;
