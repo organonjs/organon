@@ -32,7 +32,9 @@
   "devDependencies": {
     "@organon/emoji-regex-rgi": "workspace:*",
     "@organon/organon-node-rig": "workspace:*",
+    "@rushstack/eslint-config": "~2.6.1",
     "@rushstack/heft": "~0.45.8",
-    "@types/heft-jest": "~1.0.3"
+    "@types/heft-jest": "~1.0.3",
+    "eslint": "~8.18.0"
   }
 }
