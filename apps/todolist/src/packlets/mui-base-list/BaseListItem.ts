@@ -1,8 +1,9 @@
 import { default as ListItem, ListItemProps } from "@mui/material/ListItem";
 
-export type BaseListItemProps = ListItemProps<"li", { button?: false }>;
-export type BaseListItemPropsWithoutRef = Omit<BaseListItemProps, "ref">;
-export type BaseListItem = typeof ListItem;
+export type IBaseListItemProps = ListItemProps<"li", { button?: false }>;
+export type IBaseListItem = typeof ListItem;
 
-export const BaseListItem: BaseListItem = ListItem;
-export default BaseListItem;
+// The following allows { ref, ...listItemPropsWithoutRef } = listItemProps
+export type IBaseListItemPropsWithoutRef = Omit<IBaseListItemProps, "ref">;
+
+export const BaseListItem: IBaseListItem = ListItem;
