@@ -1,6 +1,6 @@
 {
   "name": "conventional-changelog-organon",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A wrapper to use emojis with conventional-changelog and commitlint",
   "keywords": [
     "commitlint",
