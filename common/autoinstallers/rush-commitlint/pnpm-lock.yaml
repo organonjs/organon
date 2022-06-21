@@ -2,13 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@commitlint/cli': ^17.0.2
-  '@organon/commitlint-config': ^0.0.2
-  conventional-changelog-organon: ^0.0.3
+  '@organon/commitlint-config': ^0.1.0
+  conventional-changelog-organon: ^0.1.0
 
 dependencies:
   '@commitlint/cli': 17.0.2
-  '@organon/commitlint-config': 0.0.2
-  conventional-changelog-organon: 0.0.3
+  '@organon/commitlint-config': 0.1.0
+  conventional-changelog-organon: 0.1.0
 
 packages:
 
@@ -209,8 +209,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.13
     dev: false
 
-  /@organon/commitlint-config/0.0.2:
-    resolution: {integrity: sha512-A5FbcWnPWM1NzR778h0+zHw8sQAFDD3umN1nuciQNbbhGHD034m3lkJIJYBoFV/jTdG9uWb8dyKZx6oT6tFjuw==}
+  /@organon/commitlint-config/0.1.0:
+    resolution: {integrity: sha512-G3c+tf+xyLA/zWIFN86hLxO/hWrLUTJIdwkW3UCclr7GiVzmALUdLyuUlT+ZMlbxTSxqEpEgo7iV8KNqKawH3w==}
     dev: false
 
   /@tsconfig/node10/1.0.9:
@@ -432,8 +432,8 @@ packages:
       q: 1.5.1
     dev: false
 
-  /conventional-changelog-organon/0.0.3:
-    resolution: {integrity: sha512-55Aw2N+eJpVTmpqdxSOPnGoEwziNMasIWJfAmzvyB/o8GyJDaB63SxHMso6h+e1wF1mKb8g6bQANRkSi7/lS8w==}
+  /conventional-changelog-organon/0.1.0:
+    resolution: {integrity: sha512-bZUg/59S6Am0LU6awVSA5Vs+TQolgkoyZVk2pacZCTYhNj6GryIuY3OwvrNcaCvhq8D0R14E0Z46nvDt7a1/aw==}
     dependencies:
       '@types/conventional-changelog-core': 4.2.1
       conventional-changelog-conventionalcommits: 5.0.0
