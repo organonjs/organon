@@ -377,11 +377,13 @@
     },
     {
       "packageName": "@organon/organon-node-rig",
-      "projectFolder": "rigs/organon-node-rig"
+      "projectFolder": "rigs/organon-node-rig",
+      "shouldPublish": true
     },
     {
       "packageName": "@organon/organon-web-rig",
-      "projectFolder": "rigs/organon-web-rig"
+      "projectFolder": "rigs/organon-web-rig",
+      "shouldPublish": true
     },
     {
       "packageName": "@organon/todolist",
