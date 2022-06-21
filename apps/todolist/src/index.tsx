@@ -1,8 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import BaseList from "./BaseList";
-import BaseListItem from "./BaseListItem";
+import { BaseList, BaseListItem } from "./packlets/mui-base-list";
 import ListItemText from "@mui/material/ListItemText";
 
 const rootDiv: HTMLElement = document.getElementById("root") as HTMLElement;
