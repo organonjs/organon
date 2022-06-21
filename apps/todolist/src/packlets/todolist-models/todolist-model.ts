@@ -43,7 +43,10 @@ export class TodoListModel implements ITodoList {
   }
 
   public setItems(texts: readonly string[]): void {
-    this.#items = texts.map((text, position) => TodoListModel.makeItem(position, text));
+    this.#items.length = 0;
+    for (const [position, text] of texts.entries()) {
+      this.#items.push(TodoListModel.makeItem(position, text));
+    }
   }
 
   public clearItems(): void {
