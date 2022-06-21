@@ -9,6 +9,7 @@
     "sourceMap": true,
     "declarationMap": true,
     "strict": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "../../../../../lib",
     "types": ["heft-jest", "webpack-env"]
