@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as React from "react";
 import { createRoot, Root } from "react-dom/client";
-import { DragDropContext, DropResult, Droppable, Draggable } from "react-beautiful-dnd";
-import { BaseList, BaseListItem } from "./packlets/mui-base-list";
+import { DragDropContext, DropResult } from "react-beautiful-dnd";
+import { DraggableListItem, DroppableList } from "./packlets/mui-base-dnd-list";
 import ListItemText from "@mui/material/ListItemText";
 
 const rootDiv: HTMLElement = document.getElementById("root") as HTMLElement;
@@ -14,21 +14,12 @@ const onDragEnd = (result: DropResult): void => {
 
 root.render(
   <DragDropContext onDragEnd={onDragEnd}>
-    <Droppable droppableId="id">
-      {({ innerRef, droppableProps, placeholder }) => (
-        <BaseList ref={innerRef} {...droppableProps}>
-          {["foo", "bar", "qux"].map((txt, index) => (
-            <Draggable draggableId={"id" + index} index={index} key={index}>
-              {({ draggableProps, dragHandleProps, innerRef }) => (
-                <BaseListItem ref={innerRef} key={index} {...draggableProps} {...dragHandleProps}>
-                  <ListItemText primary={txt} secondary={"item" + index} />
-                </BaseListItem>
-              )}
-            </Draggable>
-          ))}
-          {placeholder}
-        </BaseList>
-      )}
-    </Droppable>
+    <DroppableList droppableProps={{ droppableId: "id" }}>
+      {["foo", "bar", "qux"].map((txt, index) => (
+        <DraggableListItem key={index} draggableProps={{ draggableId: "item" + index, index }}>
+          <ListItemText primary={txt} secondary={"item" + index} />
+        </DraggableListItem>
+      ))}
+    </DroppableList>
   </DragDropContext>
 );
