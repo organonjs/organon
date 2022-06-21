@@ -1,0 +1,48 @@
+{
+  "name": "@organon/todolist",
+  "version": "0.0.1",
+  "description": "Basic todo list",
+  "keywords": [
+    "react",
+    "todolist"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "cjs/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "cjs",
+    "assets"
+  ],
+  "author": {
+    "name": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organonjs/organon/tree/main/apps/todolist"
+  },
+  "scripts": {
+    "build": "heft test --clean",
+    "start": "heft start"
+  },
+  "dependencies": {
+    "@types/react": "~18.0.14",
+    "@types/react-dom": "~18.0.5",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0"
+  },
+  "devDependencies": {
+    "@organon/organon-web-rig": "workspace:*",
+    "@rushstack/eslint-config": "~2.6.1",
+    "@rushstack/heft": "~0.45.8",
+    "@rushstack/heft-webpack5-plugin": "~0.5.23",
+    "@types/heft-jest": "~1.0.3",
+    "@types/node": "~18.0.0",
+    "@types/webpack-env": "~1.17.0",
+    "eslint": "~8.18.0",
+    "webpack": "~5.68.0"
+  }
+}

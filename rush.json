@@ -381,6 +381,10 @@
       "projectFolder": "rigs/organon-web-rig"
     },
     {
+      "packageName": "@organon/todolist",
+      "projectFolder": "apps/todolist"
+    },
+    {
       "packageName": "conventional-changelog-organon",
       "projectFolder": "tooling/conventional-changelog"
       //   /**
