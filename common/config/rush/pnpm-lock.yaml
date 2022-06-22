@@ -13,8 +13,10 @@ importers:
       '@mui/icons-material': ~5.8.4
       '@mui/material': ~5.8.4
       '@organon/organon-web-rig': workspace:*
+      '@organon/storykit': workspace:*
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
+      '@rushstack/heft-storybook-plugin': ~0.1.54
       '@rushstack/heft-webpack5-plugin': ~0.5.23
       '@types/heft-jest': ~1.0.3
       '@types/node': ~18.0.0
@@ -43,8 +45,10 @@ importers:
     devDependencies:
       '@babel/core': 7.18.5
       '@organon/organon-web-rig': link:../../rigs/organon-web-rig
+      '@organon/storykit': link:../../tooling/storykit
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8
+      '@rushstack/heft-storybook-plugin': 0.1.54_@rushstack+heft@0.45.8
       '@rushstack/heft-webpack5-plugin': 0.5.23_2qnnihoehegaxjknskk76leize
       '@types/heft-jest': 1.0.3
       '@types/node': 18.0.0
@@ -2715,7 +2719,6 @@ packages:
     dependencies:
       '@rushstack/heft': 0.45.8
       '@rushstack/node-core-library': 3.45.7
-    dev: false
 
   /@rushstack/heft-webpack5-plugin/0.5.23_2qnnihoehegaxjknskk76leize:
     resolution: {integrity: sha512-r03/uv+p1gNUacgpT9uEP1oFyn+CXHcV/decSX19KfIXuRVWdvG1pJXYJQyn+r8MdgwPF5zlQ4UZAQQP+HCm2g==}

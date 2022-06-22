@@ -26,7 +26,8 @@
   },
   "scripts": {
     "build": "heft test --clean",
-    "start": "heft start"
+    "start": "heft start",
+    "storybook": "heft start --storybook"
   },
   "dependencies": {
     "@emotion/react": "~11.9.3",
@@ -44,8 +45,10 @@
   "devDependencies": {
     "@babel/core": "~7.18.5",
     "@organon/organon-web-rig": "workspace:*",
+    "@organon/storykit": "workspace:*",
     "@rushstack/eslint-config": "~2.6.1",
     "@rushstack/heft": "~0.45.8",
+    "@rushstack/heft-storybook-plugin": "~0.1.54",
     "@rushstack/heft-webpack5-plugin": "~0.5.23",
     "@types/heft-jest": "~1.0.3",
     "@types/node": "~18.0.0",
