@@ -38,6 +38,25 @@ export class ListModel implements IListModel {
     }
   }
 
+  public moveItem(fromPosition: number, toPosition: number): IListItemModel | undefined {
+    if (fromPosition === toPosition) {
+      return;
+    }
+
+    const fromItem = this.#items[fromPosition];
+
+    if (!fromItem || !this.#items[toPosition]) {
+      return;
+    }
+
+    this.#items.splice(fromPosition, 1);
+    this.#items.splice(toPosition, 0, fromItem);
+
+    this.#items = this.#items.map(({ text, valid }, position) => Object.freeze({ position, text, valid }));
+
+    return this.#items[toPosition];
+  }
+
   public getItems(): readonly IListItemModel[] {
     return Array.from(this.#items);
   }

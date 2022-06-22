@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(todolist): can move item\n\nmoveItem method moves an item from/to two valid positions or\ndo nothing.\n",
+      "packageName": "@organon/todolist",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/todolist",
+  "email": "jason.lenoble@gmail.com"
+}

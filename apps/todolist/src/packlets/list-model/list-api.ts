@@ -9,6 +9,7 @@ export interface IListModel {
   removeItem(position: number): boolean;
   updateItem(position: number, text: string): IListItemModel | undefined;
   getItem(position: number): IListItemModel | undefined;
+  moveItem(fromPosition: number, toPosition: number): IListItemModel | undefined;
 
   getItems(): readonly IListItemModel[];
   setItems(texts: readonly string[]): void;

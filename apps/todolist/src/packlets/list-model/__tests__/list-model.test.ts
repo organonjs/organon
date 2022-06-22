@@ -29,6 +29,30 @@ describe(`ListModel`, () => {
       expect(list.getItem(4)).toBeUndefined();
     });
 
+    it(`can move an item`, () => {
+      const list = new ListModel(["foo", "bar", "qux"]);
+
+      expect(list.moveItem(2, 0)).toEqual({ position: 0, text: "qux", valid: true });
+      expect(list.getItems()).toEqual(
+        ["qux", "foo", "bar"].map((text, position) => ({ position, text, valid: true }))
+      );
+
+      expect(list.moveItem(1, 2)).toEqual({ position: 2, text: "foo", valid: true });
+      expect(list.getItems()).toEqual(
+        ["qux", "bar", "foo"].map((text, position) => ({ position, text, valid: true }))
+      );
+
+      expect(list.moveItem(1, 4)).toBeUndefined();
+      expect(list.getItems()).toEqual(
+        ["qux", "bar", "foo"].map((text, position) => ({ position, text, valid: true }))
+      );
+
+      expect(list.moveItem(7, 1)).toBeUndefined();
+      expect(list.getItems()).toEqual(
+        ["qux", "bar", "foo"].map((text, position) => ({ position, text, valid: true }))
+      );
+    });
+
     it(`can get all items`, () => {
       const list = new ListModel(["foo", "bar", "qux"]);
 
@@ -97,6 +121,50 @@ describe(`ListModel`, () => {
         valid: true,
       });
       expect(list.getItem(4)).toBeUndefined();
+    });
+
+    it(`can move an item`, () => {
+      const list = new ListModel(["foo", 1 as any, "<script></script>"]);
+
+      expect(list.moveItem(2, 0)).toEqual({
+        position: 0,
+        text: "&lt;script&gt;&lt;/script&gt;",
+        valid: true,
+      });
+      expect(list.getItems()).toEqual(
+        ["&lt;script&gt;&lt;/script&gt;", "foo", ""].map((text, position) => ({
+          position,
+          text,
+          valid: !!text,
+        }))
+      );
+
+      expect(list.moveItem(1, 2)).toEqual({ position: 2, text: "foo", valid: true });
+      expect(list.getItems()).toEqual(
+        ["&lt;script&gt;&lt;/script&gt;", "", "foo"].map((text, position) => ({
+          position,
+          text,
+          valid: !!text,
+        }))
+      );
+
+      expect(list.moveItem(1, 4)).toBeUndefined();
+      expect(list.getItems()).toEqual(
+        ["&lt;script&gt;&lt;/script&gt;", "", "foo"].map((text, position) => ({
+          position,
+          text,
+          valid: !!text,
+        }))
+      );
+
+      expect(list.moveItem(7, 1)).toBeUndefined();
+      expect(list.getItems()).toEqual(
+        ["&lt;script&gt;&lt;/script&gt;", "", "foo"].map((text, position) => ({
+          position,
+          text,
+          valid: !!text,
+        }))
+      );
     });
 
     it(`can get all items`, () => {
