@@ -9,13 +9,9 @@ export type IDraggablePropsWithoutChildren = Omit<DraggableProps, "children">;
 export interface IDraggableListItemProps extends IBaseListItemPropsWithoutRef {
   draggableProps: IDraggablePropsWithoutChildren;
 }
+export type IDraggableListItem = FunctionComponent<IDraggableListItemProps>;
 
-export const DraggableListItem: FunctionComponent<IDraggableListItemProps> = ({
-  children,
-  className,
-  draggableProps,
-  ...other
-}) => (
+export const DraggableListItem: IDraggableListItem = ({ children, className, draggableProps, ...other }) => (
   <Draggable {...draggableProps}>
     {(
       { innerRef, draggableProps, dragHandleProps }: DraggableProvided,

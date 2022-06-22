@@ -9,12 +9,9 @@ export interface IDroppableListProps extends IBaseListPropsWithoutRef {
   droppableProps: IDroppablePropsWithoutChildren;
 }
 
-export const DroppableList: FunctionComponent<IDroppableListProps> = ({
-  children,
-  className,
-  droppableProps,
-  ...other
-}) => (
+export type IDroppableList = FunctionComponent<IDroppableListProps>;
+
+export const DroppableList: IDroppableList = ({ children, className, droppableProps, ...other }) => (
   <Droppable {...droppableProps}>
     {(
       { innerRef, droppableProps, placeholder }: DroppableProvided,
