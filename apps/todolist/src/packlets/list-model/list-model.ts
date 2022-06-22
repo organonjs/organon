@@ -1,14 +1,14 @@
-import { ITodoListItem, ITodoList } from "./api";
+import { IListItemModel, IListModel } from "./list-api";
 
-export class TodoListModel implements ITodoList {
-  #items: ITodoListItem[];
+export class ListModel implements IListModel {
+  #items: IListItemModel[];
 
   public constructor(texts: readonly string[] = []) {
-    this.#items = texts.map((text, position) => TodoListModel.makeItem(position, text));
+    this.#items = texts.map((text, position) => ListModel.makeItem(position, text));
   }
 
-  public addItem(text: string): ITodoListItem {
-    const item = TodoListModel.makeItem(this.#items.length, text);
+  public addItem(text: string): IListItemModel {
+    const item = ListModel.makeItem(this.#items.length, text);
     this.#items.push(item);
     return item;
   }
@@ -22,30 +22,30 @@ export class TodoListModel implements ITodoList {
     return false;
   }
 
-  public updateItem(position: number, text: string): ITodoListItem | undefined {
+  public updateItem(position: number, text: string): IListItemModel | undefined {
     let item = this.#items[position];
     if (item !== undefined) {
-      item = TodoListModel.makeItem(position, text);
+      item = ListModel.makeItem(position, text);
       this.#items[position] = item;
       return item;
     }
   }
 
-  public getItem(position: number): ITodoListItem | undefined {
+  public getItem(position: number): IListItemModel | undefined {
     const item = this.#items[position];
     if (item !== undefined) {
       return item;
     }
   }
 
-  public getItems(): readonly ITodoListItem[] {
+  public getItems(): readonly IListItemModel[] {
     return Array.from(this.#items);
   }
 
   public setItems(texts: readonly string[]): void {
     this.#items.length = 0;
     for (const [position, text] of texts.entries()) {
-      this.#items.push(TodoListModel.makeItem(position, text));
+      this.#items.push(ListModel.makeItem(position, text));
     }
   }
 
@@ -61,9 +61,9 @@ export class TodoListModel implements ITodoList {
     return text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  public static makeItem(position: number, text: string): ITodoListItem {
-    const valid = TodoListModel.validate(text);
-    text = valid ? TodoListModel.sanitize(text) : "";
+  public static makeItem(position: number, text: string): IListItemModel {
+    const valid = ListModel.validate(text);
+    text = valid ? ListModel.sanitize(text) : "";
     return Object.freeze({ position, text, valid });
   }
 }
