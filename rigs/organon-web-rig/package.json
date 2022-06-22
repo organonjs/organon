@@ -24,6 +24,7 @@
   "dependencies": {
     "@rushstack/heft": "~0.45.8",
     "@rushstack/heft-jest-plugin": "~0.3.8",
+    "@rushstack/heft-storybook-plugin": "~0.1.54",
     "@rushstack/heft-webpack5-plugin": "~0.5.23",
     "css-loader": "~6.7.1",
     "eslint": "~8.18.0",

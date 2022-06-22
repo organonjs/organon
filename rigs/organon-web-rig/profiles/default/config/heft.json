@@ -5,6 +5,13 @@
     },
     {
       "plugin": "@rushstack/heft-webpack5-plugin"
+    },
+    {
+      "plugin": "@rushstack/heft-storybook-plugin",
+      "options": {
+        "storykitPackageName": "@organon/storykit",
+        "startupModulePath": "@storybook/react/bin/index.js"
+      }
     }
   ]
 }

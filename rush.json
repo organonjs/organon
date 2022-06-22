@@ -391,6 +391,10 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@organon/storykit",
+      "projectFolder": "tooling/storykit"
+    },
+    {
       "packageName": "conventional-changelog-organon",
       "projectFolder": "tooling/conventional-changelog",
       "shouldPublish": true
