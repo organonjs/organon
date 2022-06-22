@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as React from "react";
 import { createRoot, Root } from "react-dom/client";
-import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import { DraggableListItem, DroppableList } from "./packlets/mui-base-dnd-list";
+import { DropResult } from "react-beautiful-dnd";
+import { DndList } from "./packlets/mui-base-dnd-list";
 import ListItemText from "@mui/material/ListItemText";
 
 const rootDiv: HTMLElement = document.getElementById("root") as HTMLElement;
@@ -13,13 +13,9 @@ const onDragEnd = (result: DropResult): void => {
 };
 
 root.render(
-  <DragDropContext onDragEnd={onDragEnd}>
-    <DroppableList droppableProps={{ droppableId: "id" }}>
-      {["foo", "bar", "qux"].map((txt, index) => (
-        <DraggableListItem key={index} draggableProps={{ draggableId: "item" + index, index }}>
-          <ListItemText primary={txt} secondary={"item" + index} />
-        </DraggableListItem>
-      ))}
-    </DroppableList>
-  </DragDropContext>
+  <DndList droppableProps={{ droppableId: "id" }} dndContextProps={{ onDragEnd }}>
+    {["foo", "bar", "qux"].map((txt, index) => (
+      <ListItemText key={index} primary={txt} secondary={"item" + index} />
+    ))}
+  </DndList>
 );
