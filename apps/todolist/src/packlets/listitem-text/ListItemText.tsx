@@ -1,10 +1,7 @@
 import React, { FunctionComponent } from "react";
-import {
-  ListItemText as MuiListItemText,
-  ListItemTextProps as MuiListItemTextProps,
-  TextFieldProps,
-  TypographyVariant,
-} from "@mui/material";
+import MuiListItemText, { ListItemTextProps as MuiListItemTextProps } from "@mui/material/ListItemText";
+import { TextFieldProps } from "@mui/material/TextField";
+import { TypographyVariant } from "@mui/material/styles";
 import { InlineText } from "../inline-text";
 
 export interface IListItemTextProps extends Omit<MuiListItemTextProps, "primary"> {

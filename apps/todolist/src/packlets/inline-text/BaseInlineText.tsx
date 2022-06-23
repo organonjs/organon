@@ -1,7 +1,9 @@
 import React, { FunctionComponent } from "react";
-import { Typography, TypographyVariant } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import { TypographyVariant } from "@mui/material/styles";
 import { TextField, IBaseTextFieldProps } from "../textfield";
-import { Alert, AlertTitle } from "@mui/material";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 import { ErrorTooltip } from "../error-tooltip";
 
 export interface IBaseInlineTextProps {
