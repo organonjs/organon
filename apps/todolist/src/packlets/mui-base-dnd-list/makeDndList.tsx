@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from "react";
 import { DropResult } from "react-beautiful-dnd";
-import { ListManager, IListItemData, IListItemInputData } from "../list-model";
+import { ListManager, IListItemData, IListItemInputData } from "../list-manager";
 import { DndList, IDndContextPropsWithoutChildren } from "./DndList";
 import { IDroppablePropsWithoutChildren } from "./DroppableList";
 import { IBaseListPropsWithoutRef } from "../mui-base-list";

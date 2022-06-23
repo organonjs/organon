@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ComponentStory, ComponentMeta } from "@organon/storykit";
 import { makeDndList } from "./makeDndList";
-import { IListItemInputData } from "../list-model";
+import { IListItemInputData } from "../list-manager";
 
 const dispatchItems = (droppableId: string, items: readonly IListItemInputData[]): void => {
   console.log(droppableId, items);
