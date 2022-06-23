@@ -1,14 +1,14 @@
-import { IListItemModel, IListModel } from "./list-api";
+import { IInputListItemModel, IListItemModel, IListModel } from "./list-api";
 
 export class ListModel implements IListModel {
   #items: IListItemModel[];
 
-  public constructor(texts: readonly string[] = []) {
-    this.#items = texts.map((text, position) => ListModel.makeItem(position, text));
+  public constructor(items: readonly IInputListItemModel[] = []) {
+    this.#items = items.map((item, position) => ListModel.makeItem(position, item));
   }
 
-  public addItem(text: string): IListItemModel {
-    const item = ListModel.makeItem(this.#items.length, text);
+  public addItem(inputItem: IInputListItemModel): IListItemModel {
+    const item = ListModel.makeItem(this.#items.length, inputItem);
     this.#items.push(item);
     return item;
   }
@@ -25,7 +25,7 @@ export class ListModel implements IListModel {
   public updateItem(position: number, text: string): IListItemModel | undefined {
     let item = this.#items[position];
     if (item !== undefined) {
-      item = ListModel.makeItem(position, text);
+      item = ListModel.makeItem(position, { text, key: item.key });
       this.#items[position] = item;
       return item;
     }
@@ -52,7 +52,9 @@ export class ListModel implements IListModel {
     this.#items.splice(fromPosition, 1);
     this.#items.splice(toPosition, 0, fromItem);
 
-    this.#items = this.#items.map(({ text, valid }, position) => Object.freeze({ position, text, valid }));
+    this.#items = this.#items.map(({ text, valid, key }, position) =>
+      Object.freeze({ position, text, valid, key })
+    );
 
     return this.#items[toPosition];
   }
@@ -61,10 +63,10 @@ export class ListModel implements IListModel {
     return Array.from(this.#items);
   }
 
-  public setItems(texts: readonly string[]): void {
+  public setItems(items: readonly IInputListItemModel[]): void {
     this.#items.length = 0;
-    for (const [position, text] of texts.entries()) {
-      this.#items.push(ListModel.makeItem(position, text));
+    for (const [position, item] of items.entries()) {
+      this.#items.push(ListModel.makeItem(position, item));
     }
   }
 
@@ -80,9 +82,9 @@ export class ListModel implements IListModel {
     return text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  public static makeItem(position: number, text: string): IListItemModel {
+  public static makeItem(position: number, { text, key }: IInputListItemModel): IListItemModel {
     const valid = ListModel.validate(text);
     text = valid ? ListModel.sanitize(text) : "";
-    return Object.freeze({ position, text, valid });
+    return Object.freeze({ position, text, valid, key });
   }
 }
