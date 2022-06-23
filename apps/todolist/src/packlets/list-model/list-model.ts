@@ -1,14 +1,14 @@
-import { IInputListItemModel, IListItemModel, IListModel } from "./list-api";
+import { IListItemInputData, IListItemData, IListManager } from "./list-api";
 
-export class ListModel implements IListModel {
-  #items: IListItemModel[];
+export class ListManager implements IListManager {
+  #items: IListItemData[];
 
-  public constructor(items: readonly IInputListItemModel[] = []) {
-    this.#items = items.map((item, position) => ListModel.makeItem(position, item));
+  public constructor(items: readonly IListItemInputData[] = []) {
+    this.#items = items.map((item, position) => ListManager.makeItem(position, item));
   }
 
-  public addItem(inputItem: IInputListItemModel): IListItemModel {
-    const item = ListModel.makeItem(this.#items.length, inputItem);
+  public addItem(inputItem: IListItemInputData): IListItemData {
+    const item = ListManager.makeItem(this.#items.length, inputItem);
     this.#items.push(item);
     return item;
   }
@@ -22,23 +22,23 @@ export class ListModel implements IListModel {
     return false;
   }
 
-  public updateItem(position: number, text: string): IListItemModel | undefined {
+  public updateItem(position: number, text: string): IListItemData | undefined {
     let item = this.#items[position];
     if (item !== undefined) {
-      item = ListModel.makeItem(position, { text, key: item.key });
+      item = ListManager.makeItem(position, { text, key: item.key });
       this.#items[position] = item;
       return item;
     }
   }
 
-  public getItem(position: number): IListItemModel | undefined {
+  public getItem(position: number): IListItemData | undefined {
     const item = this.#items[position];
     if (item !== undefined) {
       return item;
     }
   }
 
-  public moveItem(fromPosition: number, toPosition: number): IListItemModel | undefined {
+  public moveItem(fromPosition: number, toPosition: number): IListItemData | undefined {
     if (fromPosition === toPosition) {
       return;
     }
@@ -59,14 +59,14 @@ export class ListModel implements IListModel {
     return this.#items[toPosition];
   }
 
-  public getItems(): readonly IListItemModel[] {
+  public getItems(): readonly IListItemData[] {
     return Array.from(this.#items);
   }
 
-  public setItems(items: readonly IInputListItemModel[]): void {
+  public setItems(items: readonly IListItemInputData[]): void {
     this.#items.length = 0;
     for (const [position, item] of items.entries()) {
-      this.#items.push(ListModel.makeItem(position, item));
+      this.#items.push(ListManager.makeItem(position, item));
     }
   }
 
@@ -82,9 +82,9 @@ export class ListModel implements IListModel {
     return text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  public static makeItem(position: number, { text, key }: IInputListItemModel): IListItemModel {
-    const valid = ListModel.validate(text);
-    text = valid ? ListModel.sanitize(text) : "";
+  public static makeItem(position: number, { text, key }: IListItemInputData): IListItemData {
+    const valid = ListManager.validate(text);
+    text = valid ? ListManager.sanitize(text) : "";
     return Object.freeze({ position, text, valid, key });
   }
 }

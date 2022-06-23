@@ -9,9 +9,9 @@ export interface IDndListProps extends IDroppableListProps {
   dndContextProps: IDndContextPropsWithoutChildren;
 }
 
-export type IDndList = FunctionComponent<IDndListProps>;
+export type DndList = FunctionComponent<IDndListProps>;
 
-export const DndList: IDndList = ({ children, droppableProps, dndContextProps, ...other }) => {
+export const DndList: DndList = ({ children, droppableProps, dndContextProps, ...other }) => {
   const { droppableId } = droppableProps;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const sanitizedChildren: any[] = Array.isArray(children) ? children : [children];

@@ -1,17 +1,15 @@
 import * as React from "react";
-
 import { ComponentStory, ComponentMeta } from "@organon/storykit";
-
-import { BaseList, IBaseList } from "./BaseList";
+import { BaseList } from "./BaseList";
 import { BaseListItem } from "./BaseListItem";
 import ListItemText from "@mui/material/ListItemText";
 
 export default {
   title: "MUI base List",
   component: BaseList,
-} as ComponentMeta<IBaseList>;
+} as ComponentMeta<BaseList>;
 
-const Template: ComponentStory<IBaseList> = (args) => <BaseList {...args} />;
+const Template: ComponentStory<BaseList> = (args) => <BaseList {...args} />;
 
 // eslint-disable-next-line
 export const EmptyList: any = Template.bind({});

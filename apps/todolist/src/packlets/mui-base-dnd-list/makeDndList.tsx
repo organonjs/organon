@@ -1,13 +1,13 @@
 import React, { FunctionComponent, useState } from "react";
 import { DropResult } from "react-beautiful-dnd";
-import { ListModel, IListItemModel, IInputListItemModel } from "../list-model";
+import { ListManager, IListItemData, IListItemInputData } from "../list-model";
 import { DndList, IDndContextPropsWithoutChildren } from "./DndList";
 import { IDroppablePropsWithoutChildren } from "./DroppableList";
 import { IBaseListPropsWithoutRef } from "../mui-base-list";
 import ListItemText from "@mui/material/ListItemText";
 
 interface IStatefulDndListProps extends IBaseListPropsWithoutRef {
-  initItems: readonly IListItemModel[];
+  initItems: readonly IListItemData[];
   dndContextProps?: IDndContextPropsWithoutChildren;
   droppableProps?: IDroppablePropsWithoutChildren;
 }
@@ -15,21 +15,21 @@ interface IStatefulDndListProps extends IBaseListPropsWithoutRef {
 type IStatefulDndList = FunctionComponent<IStatefulDndListProps>;
 
 const isStringArray = (
-  items: readonly string[] | readonly IInputListItemModel[]
+  items: readonly string[] | readonly IListItemInputData[]
 ): items is readonly string[] => {
   return typeof items[0] === "string";
 };
 
 export const makeDndList = (
   droppableId: string,
-  items: readonly string[] | readonly IInputListItemModel[] = [],
-  dispatchItems: (droppableId: string, items: readonly IInputListItemModel[]) => void
+  items: readonly string[] | readonly IListItemInputData[] = [],
+  dispatchItems: (droppableId: string, items: readonly IListItemInputData[]) => void
 ): FunctionComponent => {
   if (isStringArray(items)) {
-    items = items.map((text, index): IInputListItemModel => ({ text, key: "" + index }));
+    items = items.map((text, index): IListItemInputData => ({ text, key: "" + index }));
   }
 
-  const list = new ListModel(items);
+  const list = new ListManager(items);
 
   const StatefulDndList: IStatefulDndList = ({ initItems, dndContextProps, droppableProps, ...other }) => {
     const [items, setItems] = useState(initItems);

@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { IInputListItemModel } from "../list-api";
-import { ListModel } from "../list-model";
+import { IListItemInputData } from "../list-api";
+import { ListManager } from "../list-model";
 
-const initkeys = (texts: readonly string[]): readonly IInputListItemModel[] =>
+const initkeys = (texts: readonly string[]): readonly IListItemInputData[] =>
   texts.map((text, index) => ({ text, key: "" + index }));
 
-describe(`ListModel`, () => {
+describe(`ListManager`, () => {
   describe(`used with valid data`, () => {
     it(`can add an item`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
 
       expect(list.addItem({ text: "quux", key: "3" })).toEqual({
         position: 3,
@@ -19,27 +19,27 @@ describe(`ListModel`, () => {
     });
 
     it(`can update an item`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
 
       expect(list.updateItem(1, "quux")).toEqual({ position: 1, text: "quux", valid: true, key: "1" });
     });
 
     it(`can remove an item`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
 
       expect(list.removeItem(1)).toBe(true);
       expect(list.removeItem(2)).toBe(false);
     });
 
     it(`can get an item`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
 
       expect(list.getItem(2)).toEqual({ position: 2, text: "qux", valid: true, key: "2" });
       expect(list.getItem(4)).toBeUndefined();
     });
 
     it(`can move an item`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
 
       expect(list.moveItem(2, 0)).toEqual({ position: 0, text: "qux", valid: true, key: "2" });
       expect(list.getItems()).toEqual([
@@ -71,7 +71,7 @@ describe(`ListModel`, () => {
     });
 
     it(`can get all items`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
 
       expect(list.getItems()).toEqual(
         ["foo", "bar", "qux"].map((text, position) => ({ position, text, valid: true, key: "" + position }))
@@ -79,7 +79,7 @@ describe(`ListModel`, () => {
     });
 
     it(`can set all items`, () => {
-      const list = new ListModel();
+      const list = new ListManager();
       expect(list.getItems()).toHaveLength(0);
 
       list.setItems(initkeys(["foo", "bar", "qux"]));
@@ -89,7 +89,7 @@ describe(`ListModel`, () => {
     });
 
     it(`can clear all items`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
       expect(list.getItems()).toEqual(
         ["foo", "bar", "qux"].map((text, position) => ({ position, text, valid: true, key: "" + position }))
       );
@@ -101,7 +101,7 @@ describe(`ListModel`, () => {
 
   describe(`used with malicious or invalid data`, () => {
     it(`can add an item`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
 
       expect(list.addItem({ text: 1 as any, key: "3" })).toEqual({
         position: 3,
@@ -118,7 +118,7 @@ describe(`ListModel`, () => {
     });
 
     it(`can update an item`, () => {
-      const list = new ListModel(initkeys(["foo", "bar", "qux"]));
+      const list = new ListManager(initkeys(["foo", "bar", "qux"]));
 
       expect(list.updateItem(1, 1 as any)).toEqual({ position: 1, text: "", valid: false, key: "1" });
       expect(list.updateItem(1, "<script></script>")).toEqual({
@@ -130,14 +130,14 @@ describe(`ListModel`, () => {
     });
 
     it(`can remove an item`, () => {
-      const list = new ListModel(initkeys(["foo", 1 as any, "<script></script>"]));
+      const list = new ListManager(initkeys(["foo", 1 as any, "<script></script>"]));
 
       expect(list.removeItem(1)).toBe(true);
       expect(list.removeItem(2)).toBe(false);
     });
 
     it(`can get an item`, () => {
-      const list = new ListModel(initkeys(["foo", 1 as any, "<script></script>"]));
+      const list = new ListManager(initkeys(["foo", 1 as any, "<script></script>"]));
 
       expect(list.getItem(2)).toEqual({
         position: 2,
@@ -149,7 +149,7 @@ describe(`ListModel`, () => {
     });
 
     it(`can move an item`, () => {
-      const list = new ListModel(initkeys(["foo", 1 as any, "<script></script>"]));
+      const list = new ListManager(initkeys(["foo", 1 as any, "<script></script>"]));
 
       expect(list.moveItem(2, 0)).toEqual({
         position: 0,
@@ -246,7 +246,7 @@ describe(`ListModel`, () => {
     });
 
     it(`can get all items`, () => {
-      const list = new ListModel(initkeys(["foo", 1 as any, "<script></script>"]));
+      const list = new ListManager(initkeys(["foo", 1 as any, "<script></script>"]));
 
       expect(list.getItems()).toEqual([
         { position: 0, text: "foo", valid: true, key: "0" },
@@ -256,7 +256,7 @@ describe(`ListModel`, () => {
     });
 
     it(`can set all items`, () => {
-      const list = new ListModel();
+      const list = new ListManager();
       expect(list.getItems()).toHaveLength(0);
 
       list.setItems(initkeys(["foo", 1 as any, "<script></script>"]));
@@ -268,7 +268,7 @@ describe(`ListModel`, () => {
     });
 
     it(`can clear all items`, () => {
-      const list = new ListModel(initkeys(["foo", 1 as any, "<script></script>"]));
+      const list = new ListManager(initkeys(["foo", 1 as any, "<script></script>"]));
       expect(list.getItems()).toEqual([
         { position: 0, text: "foo", valid: true, key: "0" },
         { position: 1, text: "", valid: false, key: "1" },

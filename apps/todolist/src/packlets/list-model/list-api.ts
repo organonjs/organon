@@ -1,21 +1,21 @@
-export interface IInputListItemModel {
+export interface IListItemInputData {
   readonly key: string;
   readonly text: string;
 }
 
-export interface IListItemModel extends IInputListItemModel {
+export interface IListItemData extends IListItemInputData {
   readonly position: number;
   readonly valid: boolean;
 }
 
-export interface IListModel {
-  addItem(item: IInputListItemModel): IListItemModel;
+export interface IListManager {
+  addItem(item: IListItemInputData): IListItemData;
   removeItem(position: number): boolean;
-  updateItem(position: number, text: string): IListItemModel | undefined;
-  getItem(position: number): IListItemModel | undefined;
-  moveItem(fromPosition: number, toPosition: number): IListItemModel | undefined;
+  updateItem(position: number, text: string): IListItemData | undefined;
+  getItem(position: number): IListItemData | undefined;
+  moveItem(fromPosition: number, toPosition: number): IListItemData | undefined;
 
-  getItems(): readonly IListItemModel[];
-  setItems(texts: readonly IInputListItemModel[]): void;
+  getItems(): readonly IListItemData[];
+  setItems(texts: readonly IListItemInputData[]): void;
   clearItems(): void;
 }
