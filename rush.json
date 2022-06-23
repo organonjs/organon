@@ -362,23 +362,42 @@
   "projects": [
     {
       "packageName": "@organon/commitlint-config",
-      "projectFolder": "tooling/commitlint-config"
+      "projectFolder": "tooling/commitlint-config",
+      "shouldPublish": true
     },
     {
       "packageName": "@organon/emoji-presentation-map",
-      "projectFolder": "misc/emoji-presentation-map"
+      "projectFolder": "misc/emoji-presentation-map",
+      "shouldPublish": true
     },
     {
       "packageName": "@organon/emoji-regex-rgi",
-      "projectFolder": "misc/emoji-regex-rgi"
+      "projectFolder": "misc/emoji-regex-rgi",
+      "shouldPublish": true
     },
     {
       "packageName": "@organon/organon-node-rig",
-      "projectFolder": "rigs/organon-node-rig"
+      "projectFolder": "rigs/organon-node-rig",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@organon/organon-web-rig",
+      "projectFolder": "rigs/organon-web-rig",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@organon/todolist",
+      "projectFolder": "apps/todolist",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@organon/storykit",
+      "projectFolder": "tooling/storykit"
     },
     {
       "packageName": "conventional-changelog-organon",
-      "projectFolder": "tooling/conventional-changelog"
+      "projectFolder": "tooling/conventional-changelog",
+      "shouldPublish": true
       //   /**
       //    * An optional category for usage in the "browser-approved-packages.json"
       //    * and "nonbrowser-approved-packages.json" files.  The value must be one of the

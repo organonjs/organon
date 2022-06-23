@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(todolist): extract dnd logic to own component\n\nDndList encapsulates both Droppable and Draggable.\nIt is used with the same props as Mui List + dndContextProps\nand droppableProps to be passed on.\nThere is no draggableProps to be passed on yet (or ever?).\n",
+      "packageName": "@organon/todolist",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/todolist",
+  "email": "jason.lenoble@gmail.com"
+}

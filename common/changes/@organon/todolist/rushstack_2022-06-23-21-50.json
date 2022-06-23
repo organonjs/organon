@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(todolist): dnd is on/off depending on props\n",
+      "packageName": "@organon/todolist",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/todolist",
+  "email": "jason.lenoble@gmail.com"
+}

@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(todolist): dnd list factory\n\nmakeDndList is mostly a proof of concept, but the output components\nare functional, that is can be used to reorder visually an input of\nstrings.\nUsers must provide a callback to recover the graphical output.\n",
+      "packageName": "@organon/todolist",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/todolist",
+  "email": "jason.lenoble@gmail.com"
+}

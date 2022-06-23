@@ -114,6 +114,15 @@ function createChangeFile(rushConfig, bumpInfo) {
     bumpInfo.projectName,
     bumpInfo.emailAddress
   );
+  if (!changeFilePath) {
+    console.log(
+      "     >> " +
+        utils.Colors.Red +
+        `${bumpInfo.projectName} is actually not set to be publishable` +
+        utils.Colors.Reset
+    );
+    return;
+  }
   const file = require(changeFilePath);
   file.changes[0].comment = bumpInfo.lastMessage;
   file.changes[0].type = bumpInfo.increment;
@@ -176,14 +185,14 @@ function generateChangeFilesFromCommit() {
       });
       if (fileAdded) {
         console.log(utils.Colors.Green + "Automatically adding change files" + utils.Colors.Reset);
-        // utils.executeCommand(`git add "${rushConfiguration.changesFolder}"`);
+        utils.executeCommand(`git add "${rushConfiguration.changesFolder}"`);
 
         console.log(
           utils.Colors.Green +
             `Commiting change files with 'git commit --no-edit --no-verify --amend'` +
             utils.Colors.Reset
         );
-        // utils.executeCommandAsync(`git commit --no-edit --no-verify --amend `);
+        utils.executeCommandAsync(`git commit --no-edit --no-verify --amend `);
 
         console.log(utils.Colors.Green + "All done!" + utils.Colors.Reset);
       }
