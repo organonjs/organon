@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import { DropResult } from "react-beautiful-dnd";
 import { ListManager, IListItemData, IListItemInputData } from "../list-manager";
-import { DndList, IDndContextPropsWithoutChildren } from "./DndList";
+import { DndListWithContext, IDndContextPropsWithoutChildren } from "./DndListWithContext";
 import { IDroppablePropsWithoutChildren } from "./DroppableList";
 import { IBaseListPropsWithoutRef } from "../mui-base-list";
 import ListItemText from "@mui/material/ListItemText";
@@ -49,9 +49,9 @@ export const makeDndList = (
     };
 
     return (
-      <DndList dndContextProps={{ onDragEnd }} droppableProps={{ droppableId }} {...other}>
+      <DndListWithContext dndContextProps={{ onDragEnd }} droppableProps={{ droppableId }} {...other}>
         {items.map((item) => (item.valid ? <ListItemText key={item.key} primary={item.text} /> : undefined))}
-      </DndList>
+      </DndListWithContext>
     );
   };
 

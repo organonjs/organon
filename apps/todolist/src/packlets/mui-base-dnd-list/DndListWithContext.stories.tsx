@@ -1,16 +1,16 @@
 import * as React from "react";
 import { DropResult } from "react-beautiful-dnd";
 import { ComponentStory, ComponentMeta } from "@organon/storykit";
-import { DndList, IDndContextPropsWithoutChildren } from "./DndList";
+import { DndListWithContext, IDndContextPropsWithoutChildren } from "./DndListWithContext";
 import { IDroppablePropsWithoutChildren } from "./DroppableList";
 import ListItemText from "@mui/material/ListItemText";
 
 export default {
   title: "MUI Drag&Drop List",
-  component: DndList,
-} as ComponentMeta<DndList>;
+  component: DndListWithContext,
+} as ComponentMeta<DndListWithContext>;
 
-const Template: ComponentStory<DndList> = (args) => <DndList {...args} />;
+const Template: ComponentStory<DndListWithContext> = (args) => <DndListWithContext {...args} />;
 
 const onDragEnd = (result: DropResult): void => {
   console.log(result);

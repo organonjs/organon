@@ -2,7 +2,7 @@
 import * as React from "react";
 import { createRoot, Root } from "react-dom/client";
 import { DropResult } from "react-beautiful-dnd";
-import { DndList } from "./packlets/mui-base-dnd-list";
+import { DndListWithContext } from "./packlets/mui-base-dnd-list";
 import ListItemText from "@mui/material/ListItemText";
 
 const rootDiv: HTMLElement = document.getElementById("root") as HTMLElement;
@@ -13,9 +13,9 @@ const onDragEnd = (result: DropResult): void => {
 };
 
 root.render(
-  <DndList droppableProps={{ droppableId: "id" }} dndContextProps={{ onDragEnd }}>
+  <DndListWithContext droppableProps={{ droppableId: "id" }} dndContextProps={{ onDragEnd }}>
     {["foo", "bar", "qux"].map((txt, index) => (
       <ListItemText key={index} primary={txt} secondary={"item" + index} />
     ))}
-  </DndList>
+  </DndListWithContext>
 );
