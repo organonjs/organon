@@ -1,21 +1,9 @@
 import React, { FunctionComponent } from "react";
-import Checkbox, { CheckboxProps } from "@mui/material/Checkbox";
 import { ListItem as MuiListItem, IListItemProps as MuiListItemProps } from "../mui-list";
-import { ListItemText, IListItemTextProps, IBaseListItemTextProps } from "../listitem-text";
-import { DeleteButton, OpenInNewButton, IIconButtonProps } from "../buttons";
-import { CatchError } from "../error-feedback";
+import { ListItemContent, IListItemContentProps } from "./ListItemContent";
 
 export type IBaseListItemProps = MuiListItemProps;
-
-export interface IListItemProps extends IListItemTextProps {
-  itemId: string;
-  checked?: boolean;
-  checkboxProps?: Omit<CheckboxProps, "checked">;
-  listItemTextProps?: IBaseListItemTextProps;
-  deleteButtonProps?: IIconButtonProps;
-  expandButtonProps?: IIconButtonProps;
-  catchError?: CatchError;
-}
+export type IListItemProps = IListItemContentProps;
 export type ListItem = FunctionComponent<IListItemProps & IBaseListItemProps>;
 
 export const ListItem: ListItem = ({
@@ -39,18 +27,20 @@ export const ListItem: ListItem = ({
 }) => {
   return (
     <MuiListItem {...other}>
-      {checkboxProps && <Checkbox checked={checked} {...checkboxProps} />}
-      <ListItemText
+      <ListItemContent
+        checked={checked}
+        checkboxProps={checkboxProps}
         primary={primary}
         primaryLabel={primaryLabel}
         primaryHelperText={primaryHelperText}
         primaryError={primaryError}
-        primaryEnter={catchError && primaryEnter ? catchError(primaryEnter) : primaryEnter}
+        primaryEnter={primaryEnter}
         primaryTextFieldProps={primaryTextFieldProps}
-        {...listItemTextProps}
+        listItemTextProps={listItemTextProps}
+        deleteButtonProps={deleteButtonProps}
+        expandButtonProps={expandButtonProps}
+        catchError={catchError}
       />
-      {expandButtonProps && <OpenInNewButton {...expandButtonProps} catchError={catchError} />}
-      {deleteButtonProps && <DeleteButton {...deleteButtonProps} catchError={catchError} />}
     </MuiListItem>
   );
 };
