@@ -7,9 +7,13 @@
     "event"
   ],
   "license": "MIT",
-  "types": "src/index.d.ts",
+  "type": "commonjs",
+  "main": "cjs/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "src"
+    "lib",
+    "cjs"
   ],
   "author": {
     "name": "Jason Lenoble",
