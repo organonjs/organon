@@ -386,13 +386,18 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@organon/storykit",
+      "projectFolder": "tooling/storykit"
+    },
+    {
       "packageName": "@organon/todolist",
       "projectFolder": "apps/todolist",
       "shouldPublish": true
     },
     {
-      "packageName": "@organon/storykit",
-      "projectFolder": "tooling/storykit"
+      "packageName": "@organon/uievents",
+      "projectFolder": "ui/uievents",
+      "shouldPublish": true
     },
     {
       "packageName": "conventional-changelog-organon",

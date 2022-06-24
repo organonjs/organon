@@ -209,6 +209,22 @@ importers:
       typescript: 4.7.4
       webpack: 5.68.0
 
+  ../../ui/uievents:
+    specifiers:
+      '@organon/organon-web-rig': workspace:*
+      '@rushstack/eslint-config': ~2.6.1
+      '@rushstack/heft': ~0.45.8
+      '@types/heft-jest': ~1.0.3
+      '@types/webpack-env': ~1.17.0
+      eslint: ~8.18.0
+    devDependencies:
+      '@organon/organon-web-rig': link:../../rigs/organon-web-rig
+      '@rushstack/eslint-config': 2.6.1
+      '@rushstack/heft': 0.45.8
+      '@types/heft-jest': 1.0.3
+      '@types/webpack-env': 1.17.0
+      eslint: 8.18.0
+
 packages:
 
   /@ampproject/remapping/2.2.0:
