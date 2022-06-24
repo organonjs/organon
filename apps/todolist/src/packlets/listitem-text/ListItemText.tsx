@@ -4,7 +4,9 @@ import { TextFieldProps } from "@mui/material/TextField";
 import { TypographyVariant } from "@mui/material/styles";
 import { InlineText } from "../inline-text";
 
-export interface IListItemTextProps extends Omit<MuiListItemTextProps, "primary"> {
+export type IBaseListItemTextProps = Omit<MuiListItemTextProps, "primary">;
+
+export interface IListItemTextProps {
   primary: string;
   primaryVariant?: TypographyVariant;
   primaryLabel?: string;
@@ -14,7 +16,7 @@ export interface IListItemTextProps extends Omit<MuiListItemTextProps, "primary"
   primaryTextFieldProps?: TextFieldProps;
 }
 
-export type ListItemText = FunctionComponent<IListItemTextProps>;
+export type ListItemText = FunctionComponent<IListItemTextProps & IBaseListItemTextProps>;
 
 export const ListItemText: ListItemText = ({
   primary,
