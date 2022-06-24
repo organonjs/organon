@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(todolist): list item component\n\neditable, with checkbox abd buttons.\n",
+      "packageName": "@organon/todolist",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/todolist",
+  "email": "jason.lenoble@gmail.com"
+}
