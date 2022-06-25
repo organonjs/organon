@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(generics): overwrite utility type\n",
+      "packageName": "@organon/generics",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/generics",
+  "email": "jason.lenoble@gmail.com"
+}
