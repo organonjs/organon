@@ -376,6 +376,11 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@organon/generics",
+      "projectFolder": "misc/generics",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@organon/organon-node-rig",
       "projectFolder": "rigs/organon-node-rig",
       "shouldPublish": true
@@ -387,7 +392,8 @@
     },
     {
       "packageName": "@organon/storykit",
-      "projectFolder": "tooling/storykit"
+      "projectFolder": "tooling/storykit",
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/todolist",
