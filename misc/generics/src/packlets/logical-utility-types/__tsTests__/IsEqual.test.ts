@@ -1,6 +1,7 @@
-import { isTrue, isFalse } from "../logical";
-import { IsEqual } from "../set";
+import { isTrue, isFalse, Not } from "../logical";
+import { IsEqual, IsUnequal } from "../set";
 
+//IsEqual
 isTrue<IsEqual<true, true>>();
 isFalse<IsEqual<true, false>>();
 isFalse<IsEqual<false, true>>();
@@ -44,3 +45,10 @@ isFalse<IsEqual<IB, IC>>();
 
 isTrue<IsEqual<IA, IB & IC>>();
 isFalse<IsEqual<IA, IB | IC>>();
+
+// IsUnequal
+isTrue<IsUnequal<number, string>>();
+
+isTrue<IsUnequal<true, false>>();
+isFalse<IsUnequal<true, Not<false>>>();
+isTrue<IsUnequal<true, Not<Not<false>>>>();
