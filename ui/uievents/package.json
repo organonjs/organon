@@ -7,13 +7,9 @@
     "event"
   ],
   "license": "MIT",
-  "type": "commonjs",
-  "main": "cjs/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "src/index.d.ts",
   "files": [
-    "lib",
-    "cjs"
+    "src"
   ],
   "author": {
     "name": "Jason Lenoble",
@@ -33,6 +29,7 @@
     "@rushstack/heft": "~0.45.8",
     "@types/heft-jest": "~1.0.3",
     "@types/webpack-env": "~1.17.0",
-    "eslint": "~8.18.0"
+    "eslint": "~8.18.0",
+    "react": "~18.2.0"
   }
 }

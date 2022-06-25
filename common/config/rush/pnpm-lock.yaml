@@ -219,6 +219,7 @@ importers:
       '@types/heft-jest': ~1.0.3
       '@types/webpack-env': ~1.17.0
       eslint: ~8.18.0
+      react: ~18.2.0
     devDependencies:
       '@organon/organon-web-rig': link:../../rigs/organon-web-rig
       '@rushstack/eslint-config': 2.6.1
@@ -226,6 +227,7 @@ importers:
       '@types/heft-jest': 1.0.3
       '@types/webpack-env': 1.17.0
       eslint: 8.18.0
+      react: 18.2.0
 
 packages:
 
