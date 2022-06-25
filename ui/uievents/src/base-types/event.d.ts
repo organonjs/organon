@@ -194,7 +194,7 @@ export interface Event {
   readonly currentTarget: EventTarget | null;
 
   /** @deprecated */
-  readonly srcElement: EventTarget | null;
+  readonly srcElement?: EventTarget | null;
 
   /**
    * Returns the invocation target objects of event’s path (objects on which listeners will be invoked),
@@ -242,7 +242,7 @@ export interface Event {
    */
   stopPropagation(): void;
   /** @deprecated */
-  cancelBubble: boolean; // legacy alias of .stopPropagation()
+  cancelBubble?: boolean; // legacy alias of .stopPropagation()
   /**
    * Invoking this method prevents event from reaching any registered event listeners after the current one finishes running
    * and, when dispatched in a tree, also prevents event from reaching any other objects.
@@ -266,7 +266,7 @@ export interface Event {
    */
   readonly cancelable: boolean;
   /** @deprecated */
-  returnValue: boolean; // legacy
+  returnValue?: boolean; // legacy
   /**
    * If invoked when the cancelable attribute value is true, and while executing a listener for the event with passive set to false,
    * signals to the operation that caused event to be dispatched that it needs to be canceled.
@@ -302,7 +302,7 @@ export interface Event {
   readonly timeStamp: DOMHighResTimeStamp;
 
   /** @deprecated */
-  initEvent(type: DOMString, bubbles?: boolean, cancelable?: boolean): void; // legacy, bubbles and cancelable default to false
+  initEvent?(type: DOMString, bubbles?: boolean, cancelable?: boolean): void; // legacy, bubbles and cancelable default to false
 }
 
 export declare var Event: {

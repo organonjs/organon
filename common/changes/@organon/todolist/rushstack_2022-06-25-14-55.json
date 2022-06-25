@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "🐛 fix(uievents): make deprecated props optional\n",
+      "packageName": "@organon/todolist",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@organon/todolist",
+  "email": "jason.lenoble@gmail.com"
+}
