@@ -34,6 +34,7 @@
     "@emotion/styled": "~11.9.3",
     "@mui/icons-material": "~5.8.4",
     "@mui/material": "~5.8.4",
+    "@organon/uievents": "workspace:*",
     "@types/react": "~18.0.14",
     "@types/react-dom": "~18.0.5",
     "@types/react-beautiful-dnd": "13.1.2",

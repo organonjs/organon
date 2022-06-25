@@ -14,6 +14,7 @@ importers:
       '@mui/material': ~5.8.4
       '@organon/organon-web-rig': workspace:*
       '@organon/storykit': workspace:*
+      '@organon/uievents': workspace:*
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
       '@rushstack/heft-storybook-plugin': ~0.1.54
@@ -35,6 +36,7 @@ importers:
       '@emotion/styled': 11.9.3_qbwmrvb6ojitbfrbjtglmejmbm
       '@mui/icons-material': 5.8.4_yu5sa4rzeyws3lc2nzea5ulemm
       '@mui/material': 5.8.4_h2u6a3oivtyocvjxeke7xcvlfa
+      '@organon/uievents': link:../../ui/uievents
       '@types/react': 18.0.14
       '@types/react-beautiful-dnd': 13.1.2
       '@types/react-dom': 18.0.5
