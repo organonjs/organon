@@ -116,6 +116,11 @@ export declare var MouseEvent: {
   new (type: DOMString, eventInitDict?: MouseEventInit): MouseEvent;
 };
 
+/**
+ * To create an instance of the MouseEvent interface, use the MouseEvent constructor, passing an optional MouseEventInit dictionary.
+ *
+ * Ref.: https://www.w3.org/TR/uievents/#idl-mouseeventinit
+ */
 export interface MouseEventInit extends EventModifierInit {
   /**
    * The horizontal coordinate at which the event occurred relative to the origin of the screen coordinate system.
