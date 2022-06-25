@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(uievents): keyboard event types\n",
+      "packageName": "@organon/uievents",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/uievents",
+  "email": "jason.lenoble@gmail.com"
+}
