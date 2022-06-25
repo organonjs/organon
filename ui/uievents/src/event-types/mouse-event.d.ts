@@ -6,56 +6,56 @@ import { DOMString, EventHandler, StrictEventHandler, UIEvent, EventModifierInit
  *
  * In the case of nested elements, mouse events are always targeted at the most deeply nested element.
  *
- * Ref.: https://www.w3.org/TR/uievents/#events-mouseevents
+ * @see https://www.w3.org/TR/uievents/#events-mouseevents
  */
 export interface MouseEvent extends UIEvent {
   /**
    * The horizontal coordinate at which the event occurred relative to the origin of the screen coordinate system.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-screenx
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-screenx
    */
   readonly screenX: number;
   /**
    * The vertical coordinate at which the event occurred relative to the origin of the screen coordinate system.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-screeny
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-screeny
    */
   readonly screenY: number;
   /**
    * The horizontal coordinate at which the event occurred relative to the viewport associated with the event.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-clientx
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-clientx
    */
   readonly clientX: number;
   /**
    * The vertical coordinate at which the event occurred relative to the viewport associated with the event.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-clienty
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-clienty
    */
   readonly clientY: number;
 
   /**
    * Refer to the KeyboardEvent's ctrlKey attribute.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-ctrlkey
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-ctrlkey
    */
   readonly ctrlKey: boolean;
   /**
    * Refer to the KeyboardEvent's shiftKey attribute.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-shiftkey
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-shiftkey
    */
   readonly shiftKey: boolean;
   /**
    * Refer to the KeyboardEvent's altKey attribute.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-altkey
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-altkey
    */
   readonly altKey: boolean;
   /**
    * Refer to the KeyboardEvent's metaKey attribute.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-metakey
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-metakey
    */
   readonly metaKey: boolean;
 
@@ -74,7 +74,7 @@ export interface MouseEvent extends UIEvent {
    *
    * 4 indicates the X2 (forward) button.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-button
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-button
    */
   readonly button: 0 | 1 | 2 | 3 | 4;
   /**
@@ -90,14 +90,14 @@ export interface MouseEvent extends UIEvent {
    *
    * 4 indicates the auxiliary button (in general, the middle button, often combined with a mouse wheel).
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-buttons
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-buttons
    */
   readonly buttons: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
   /**
    * Used to identify a secondary EventTarget related to a UI event, depending on the type of event.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-relatedtarget
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-relatedtarget
    */
   readonly relatedTarget: EventTarget | null;
 
@@ -105,7 +105,7 @@ export interface MouseEvent extends UIEvent {
    * Queries the state of a modifier using a key value.
    * Returns true if it is a modifier key and the modifier is activated, false otherwise.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-getmodifierstate
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-getmodifierstate
    *
    * For list of Modifier keys: https://www.w3.org/TR/uievents-key/#keys-modifier
    */
@@ -119,31 +119,31 @@ export declare var MouseEvent: {
 /**
  * To create an instance of the MouseEvent interface, use the MouseEvent constructor, passing an optional MouseEventInit dictionary.
  *
- * Ref.: https://www.w3.org/TR/uievents/#idl-mouseeventinit
+ * @see https://www.w3.org/TR/uievents/#idl-mouseeventinit
  */
 export interface MouseEventInit extends EventModifierInit {
   /**
    * The horizontal coordinate at which the event occurred relative to the origin of the screen coordinate system.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-screenx
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-screenx
    */
   readonly screenX: number;
   /**
    * The vertical coordinate at which the event occurred relative to the origin of the screen coordinate system.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-screeny
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-screeny
    */
   readonly screenY: number;
   /**
    * The horizontal coordinate at which the event occurred relative to the viewport associated with the event.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-clientx
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-clientx
    */
   readonly clientX: number;
   /**
    * The vertical coordinate at which the event occurred relative to the viewport associated with the event.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-clienty
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-clienty
    */
   readonly clientY: number;
 
@@ -162,7 +162,7 @@ export interface MouseEventInit extends EventModifierInit {
    *
    * 4 indicates the X2 (forward) button.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-button
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-button
    */
   readonly button: 0 | 1 | 2 | 3 | 4;
   /**
@@ -178,30 +178,26 @@ export interface MouseEventInit extends EventModifierInit {
    *
    * 4 indicates the auxiliary button (in general, the middle button, often combined with a mouse wheel).
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-buttons
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-buttons
    */
   readonly buttons: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
   /**
    * Used to identify a secondary EventTarget related to a UI event, depending on the type of event.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-relatedtarget
+   * @see https://www.w3.org/TR/uievents/#dom-mouseevent-relatedtarget
    */
   readonly relatedTarget: EventTarget | null;
 }
 
 /**
- * The MouseEventHandler callback function type represents a callback used for mouse event handlers.
+ * The {@link MouseEventHandler} callback function type represents a callback used for mouse event handlers.
  *
- * Stricter type StrictMouseEventHandler replaces the any return value with void.
- *
- * Ref.: @organon/uievents/event-types/mouse-event
+ * Stricter type {@link StrictMouseEventHandler} replaces the any return value with void.
  */
 export type MouseEventHandler = EventHandler<MouseEvent>;
 /**
- * Stricter version of MouseEventHandler callback function type.
+ * {@link StrictMouseEventHandler} is Stricter version of {@link MouseEventHandler} callback function type.
  *
- * Replaces the any return value with void.
- *
- * Ref.: @organon/uievents/event-types/mouse-event
+ * It replaces the any return value with void.
  */
 export type StrictMouseEventHandler = StrictEventHandler<MouseEvent>;

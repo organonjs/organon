@@ -4,48 +4,48 @@
  * The DOMString type corresponds to the set of all possible sequences of code units (UTF-16 encoding).
  * In Javascript, DOMString is a just string (UTF-16 encoding too).
  *
- * Ref.: https://webidl.spec.whatwg.org/#idl-DOMString
+ * @see https://webidl.spec.whatwg.org/#idl-DOMString
  */
 export type DOMString = string;
 
-/** Ref.: https://dom.spec.whatwg.org/#abortsignal */
+/** @see https://dom.spec.whatwg.org/#abortsignal */
 export interface AbortSignal extends EventTarget {
   /**
    * Returns an AbortSignal instance whose abort reason is set to reason if not undefined; otherwise to an "AbortError" DOMException.
    *
-   * Ref.: https://dom.spec.whatwg.org/#abortsignal
+   * @see https://dom.spec.whatwg.org/#abortsignal
    */
   abort(reason?: any): AbortSignal; // new object
   /**
    * Returns an AbortSignal instance which will be aborted in milliseconds milliseconds. Its abort reason will be set to a "TimeoutError" DOMException.
    *
-   * Ref.: https://dom.spec.whatwg.org/#abortsignal
+   * @see https://dom.spec.whatwg.org/#abortsignal
    */
   timeout(milliseconds: number): AbortSignal; // new object
 
   /**
    * Returns true if signal’s AbortController has signaled to abort; otherwise false.
    *
-   * Ref.: https://dom.spec.whatwg.org/#abortsignal
+   * @see https://dom.spec.whatwg.org/#abortsignal
    */
   readonly aborted: boolean;
   /**
    * Returns signal’s abort reason.
    *
-   * Ref.: https://dom.spec.whatwg.org/#abortsignal
+   * @see https://dom.spec.whatwg.org/#abortsignal
    */
   readonly reason: any;
   /**
    * Throws signal’s abort reason, if signal’s AbortController has signaled to abort; otherwise, does nothing.
    *
-   * Ref.: https://dom.spec.whatwg.org/#abortsignal
+   * @see https://dom.spec.whatwg.org/#abortsignal
    */
   throwIfAborted(): undefined;
 
   /**
    * The onabort attribute is an event handler IDL attribute for the onabort event handler, whose event handler event type is abort.
    *
-   * Ref.: https://dom.spec.whatwg.org/#dom-abortsignal-onabort
+   * @see https://dom.spec.whatwg.org/#dom-abortsignal-onabort
    */
   onabort: EventHandler;
 }
@@ -59,14 +59,14 @@ export type EventHandlerNonNull = (event: Event) => any;
 /**
  * The EventHandler callback function type represents a callback used for event handlers.
  *
- * Ref.: https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler */
+ * @see https://html.spec.whatwg.org/multipage/webappapis.html#eventhandler */
 export type EventHandler<E = Event> = (event: E) => any | null;
 export type StrictEventHandler<E = Event> = (event: E) => void;
 
 /**
  * An EventTarget object represents a target to which an event can be dispatched when something has occurred.
  *
- * Ref.: https://dom.spec.whatwg.org/#eventtarget
+ * @see https://dom.spec.whatwg.org/#eventtarget
  */
 export interface EventTarget {
   /**
@@ -75,7 +75,7 @@ export interface EventTarget {
    * options. For compatibility this can be a boolean, in which case the method behaves exactly as if the
    * value was specified as options’s capture.
    *
-   * Ref.: https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener
+   * @see https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener
    */
   addEventListener(
     type: DOMString,
@@ -86,7 +86,7 @@ export interface EventTarget {
   /**
    * Removes the event listener in target’s event listener list with the same type, callback, and options.
    *
-   * Ref.: https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener
+   * @see https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener
    */
   removeEventListener(
     type: DOMString,
@@ -98,7 +98,7 @@ export interface EventTarget {
    * Dispatches a synthetic event event to target and returns true if either event’s cancelable attribute
    * value is false or its preventDefault() method was not invoked; otherwise false.
    *
-   * Ref.: https://dom.spec.whatwg.org/#dom-eventtarget-dispatchevent */
+   * @see https://dom.spec.whatwg.org/#dom-eventtarget-dispatchevent */
   dispatchEvent(event: Event): boolean;
 }
 
@@ -111,14 +111,14 @@ export declare var EventTarget: {
  *
  * An event listener can be used to observe a specific event.
  *
- * Ref.: https://dom.spec.whatwg.org/#callbackdef-eventlistener
+ * @see https://dom.spec.whatwg.org/#callbackdef-eventlistener
  */
 export interface EventListener {
   handleEvent(event: Event): void;
 }
 
 /**
- * Ref.: https://dom.spec.whatwg.org/#dictdef-eventlisteneroptions
+ * @see https://dom.spec.whatwg.org/#dictdef-eventlisteneroptions
  */
 export interface EventListenerOptions {
   /**
@@ -127,34 +127,34 @@ export interface EventListenerOptions {
    * when event’s eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
    * event’s eventPhase attribute value is AT_TARGET.
    *
-   * Ref.: https://dom.spec.whatwg.org/#dictdef-eventlisteneroptions
+   * @see https://dom.spec.whatwg.org/#dictdef-eventlisteneroptions
    */
   capture: boolean; // defaults to false
 }
 
 /**
- * Ref.: https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions
+ * @see https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions
  */
 export interface AddEventListenerOptions extends EventListenerOptions {
   /**
    * When set to true, options’s passive indicates that the callback will not cancel the event by invoking
    * preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
    *
-   * Ref.: https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions
+   * @see https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions
    */
   passive: boolean; // defaults to false
 
   /**
    * When set to true, options’s once indicates that the callback will only be invoked once after which the event listener will be removed.
    *
-   * Ref.: https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions
+   * @see https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions
    */
   once: boolean; // defaults to false
 
   /**
    * If an AbortSignal is passed for options’s signal, then the event listener will be removed when signal is aborted.
    *
-   * Ref.: https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions
+   * @see https://dom.spec.whatwg.org/#dictdef-addeventlisteneroptions
    */
   signal: AbortSignal;
 }
@@ -162,12 +162,12 @@ export interface AddEventListenerOptions extends EventListenerOptions {
 /**
  * An Event object is simply named an event. It allows for signaling that something has occurred, e.g., that an image has completed downloading.
  *
- * Ref.: https://dom.spec.whatwg.org/#event
+ * @see https://dom.spec.whatwg.org/#event
  */
 export interface Event {
   /** Returns the type of event, e.g. "click", "hashchange", or "submit".
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly type: DOMString;
 
@@ -178,7 +178,7 @@ export interface Event {
    *
    * Event.target may be the same as Event.currentTarget.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly target: EventTarget | null;
 
@@ -189,7 +189,7 @@ export interface Event {
    *
    * Event.target may be the same as Event.currentTarget.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly currentTarget: EventTarget | null;
 
@@ -200,45 +200,45 @@ export interface Event {
    * Returns the invocation target objects of event’s path (objects on which listeners will be invoked),
    * except for any nodes in shadow trees of which the shadow root’s mode is "closed" that are not reachable from event’s currentTarget.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   composedPath(): EventTarget[];
 
   /**
    * Constant representing the event’s phase NONE.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   NONE: 0;
   /**
    * Constant representing the event’s phase CAPTURING_PHASE.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   CAPTURING_PHASE: 1;
   /**
    * Constant representing the event’s phase AT_TARGET.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   AT_TARGET: 2;
   /**
    * Constant representing the event’s phase BUBBLING_PHASE.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   BUBBLING_PHASE: 3;
   /**
    * Returns the event’s phase, which is one of NONE, CAPTURING_PHASE, AT_TARGET, and BUBBLING_PHASE.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly eventPhase: 0 | 1 | 2 | 3;
 
   /**
    * When dispatched in a tree, invoking this method prevents event from reaching any objects other than the current object.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   stopPropagation(): void;
   /** @deprecated */
@@ -247,7 +247,7 @@ export interface Event {
    * Invoking this method prevents event from reaching any registered event listeners after the current one finishes running
    * and, when dispatched in a tree, also prevents event from reaching any other objects.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   stopImmediatePropagation(): void;
 
@@ -255,14 +255,14 @@ export interface Event {
    * Returns true or false depending on how event was initialized. True if event goes through its target’s ancestors
    * in reverse tree order; otherwise false.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly bubbles: boolean;
   /**
    * Returns true or false depending on how event was initialized. Its return value does not always carry meaning, but
    * true can indicate that part of the operation during which event was dispatched, can be canceled by invoking the preventDefault() method.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly cancelable: boolean;
   /** @deprecated */
@@ -271,33 +271,33 @@ export interface Event {
    * If invoked when the cancelable attribute value is true, and while executing a listener for the event with passive set to false,
    * signals to the operation that caused event to be dispatched that it needs to be canceled.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   preventDefault(): void;
   /**
    * Returns true if preventDefault() was invoked successfully to indicate cancelation; otherwise false.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly defaultPrevented: boolean;
   /**
    * Returns true or false depending on how event was initialized. True if event invokes listeners past a
    * ShadowRoot node that is the root of its target; otherwise false.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly composed: boolean;
 
   /**
    * Returns true if event was dispatched by the user agent, and false otherwise.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly isTrusted: boolean; // [LegacyUnforgeable]
   /**
    * Returns the event’s timestamp as the number of milliseconds measured relative to the time origin.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   readonly timeStamp: DOMHighResTimeStamp;
 
@@ -313,25 +313,25 @@ export declare var Event: {
   /**
    * Constant representing the event’s phase NONE.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   NONE: 0;
   /**
    * Constant representing the event’s phase CAPTURING_PHASE.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   CAPTURING_PHASE: 1;
   /**
    * Constant representing the event’s phase AT_TARGET.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   AT_TARGET: 2;
   /**
    * Constant representing the event’s phase BUBBLING_PHASE.
    *
-   * Ref.: https://dom.spec.whatwg.org/#event
+   * @see https://dom.spec.whatwg.org/#event
    */
   BUBBLING_PHASE: 3;
 };
@@ -339,7 +339,7 @@ export declare var Event: {
 /**
  * To initialize an event, with boolean properties bubbles, cancelable and composed
  *
- * Ref.: https://dom.spec.whatwg.org/#dictdef-eventinit
+ * @see https://dom.spec.whatwg.org/#dictdef-eventinit
  */
 export interface EventInit {
   bubbles: boolean;

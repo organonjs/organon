@@ -8,33 +8,33 @@ import { DOMString, EventHandler, StrictEventHandler, UIEvent } from "../base-ty
  * The KeyboardEvent interface provides convenient attributes for some common modifiers keys: ctrlKey, shiftKey, altKey, metaKey.
  * These attributes are equivalent to using the method getModifierState() with Control, Shift, Alt, or Meta respectively.
  *
- * Ref.: https://www.w3.org/TR/uievents/#keyboardevent
+ * @see https://www.w3.org/TR/uievents/#keyboardevent
  */
 export interface KeyboardEvent extends UIEvent {
   /**
    * The key activation MUST NOT be distinguished as the left or right version of the key, and (other than the NumLock key)
    * did not originate from the numeric keypad (or did not originate with a virtual key corresponding to the numeric keypad).
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-dom_key_location_standard
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-dom_key_location_standard
    */
   DOM_KEY_LOCATION_STANDARD: 0x00;
   /**
    * The key activated originated from the left key location (when there is more than one possible location for this key).
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-dom_key_location_left
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-dom_key_location_left
    */
   DOM_KEY_LOCATION_LEFT: 0x01;
   /**
    * The key activation originated from the right key location (when there is more than one possible location for this key).
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-dom_key_location_right
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-dom_key_location_right
    */
   DOM_KEY_LOCATION_RIGHT: 0x02;
   /**
    * The key activation originated on the numeric keypad or with a virtual key corresponding to the numeric keypad (when there is more
    * than one possible location for this key). Note that the NumLock key should always be encoded with a location of DOM_KEY_LOCATION_STANDARD.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-dom_key_location_numpad
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-dom_key_location_numpad
    */
   DOM_KEY_LOCATION_NUMPAD: 0x03;
 
@@ -43,14 +43,14 @@ export interface KeyboardEvent extends UIEvent {
    *
    * The key attribute is not related to the legacy keyCode attribute and does not have the same set of values.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-key
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-key
    */
   readonly key: DOMString;
   /**
    * code holds a string that identifies the physical key being pressed. The value is not affected by the current
    * keyboard layout or modifier state, so a particular key will always return the same value.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-code
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-code
    */
   readonly code: DOMString;
   /**
@@ -63,32 +63,32 @@ export interface KeyboardEvent extends UIEvent {
    * the location attribute MUST be set to DOM_KEY_LOCATION_STANDARD. Conversely, if the "KeyQ" key is remapped to one
    * of the Control keys, then the location attribute MUST be set to either DOM_KEY_LOCATION_LEFT or DOM_KEY_LOCATION_RIGHT.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-location
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-location
    */
   readonly location: number;
 
   /**
    * true if the Control (control) key modifier was active.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-ctrlkey
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-ctrlkey
    */
   readonly ctrlKey: boolean;
   /**
    * true if the shift (Shift) key modifier was active.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-shiftkey
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-shiftkey
    */
   readonly shiftKey: boolean;
   /**
    * true if the Alt (alternative) (or "Option") key modifier was active.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-altkey
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-altkey
    */
   readonly altKey: boolean;
   /**
    * true if the meta (Meta) key modifier was active.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-metakey
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-metakey
    */
   readonly metaKey: boolean;
 
@@ -99,14 +99,14 @@ export interface KeyboardEvent extends UIEvent {
    * as an indication of a long-key-press. The length of time that the key MUST be pressed in order to begin repeating
    * is configuration-dependent.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-repeat
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-repeat
    */
   readonly repeat: boolean;
   /**
    * true if the key event occurs as part of a composition session, i.e., after a compositionstart event and
    * before the corresponding compositionend event.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-iscomposing
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-iscomposing
    */
   readonly isComposing: boolean;
 
@@ -115,7 +115,7 @@ export interface KeyboardEvent extends UIEvent {
    *
    * Returns true if it is a modifier key and the modifier is activated, false otherwise.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardevent-getmodifierstate
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardevent-getmodifierstate
    */
   getModifierState(keyArg: DOMString): boolean;
 }
@@ -128,7 +128,7 @@ export declare var KeyboardEvent: {
  * To create an instance of the KeyboardEvent interface, use the KeyboardEvent constructor, passing an
  * optional KeyboardEventInit dictionary.
  *
- * Ref.: https://www.w3.org/TR/uievents/#idl-keyboardeventinit
+ * @see https://www.w3.org/TR/uievents/#idl-keyboardeventinit
  */
 export interface KeyboardEventInit extends EventModifierInit {
   /**
@@ -137,7 +137,7 @@ export interface KeyboardEventInit extends EventModifierInit {
    * is the final effective value of the key. If the key is not a printable character, then it should be
    * one of the key values defined in [https://www.w3.org/TR/uievents/#biblio-uievents-key].
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardeventinit-key
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardeventinit-key
    */
   key: DOMString;
   /**
@@ -145,7 +145,7 @@ export interface KeyboardEventInit extends EventModifierInit {
    * the key that was pressed, ignoring any keyboard modifications such as keyboard layout. This value should
    * be one of the code values defined in [https://www.w3.org/TR/uievents/#biblio-uievents-code].
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardeventinit-code
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardeventinit-code
    */
   code: DOMString;
   /**
@@ -156,7 +156,7 @@ export interface KeyboardEventInit extends EventModifierInit {
    * DOM_KEY_LOCATION_RIGHT (numerical value 2)
    * DOM_KEY_LOCATION_NUMPAD (numerical value 3)
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardeventinit-location
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardeventinit-location
    */
   location: 0 | 1 | 2 | 3;
   /**
@@ -164,31 +164,27 @@ export interface KeyboardEventInit extends EventModifierInit {
    * KeyboardEvent is considered part of a repeating sequence of similar events caused by the long depression of any
    * single key, false otherwise.
    *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardeventinit-repeat
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardeventinit-repeat
    */
   repeat: boolean;
   /**
    * Initializes the isComposing attribute of the KeyboardEvent object. This attribute should be set to true if the event
    * being constructed occurs as part of a composition sequence, false otherwise.
-   *
-   * Ref.: https://www.w3.org/TR/uievents/#dom-keyboardeventinit-iscomposing
+   *c-
+   * @see https://www.w3.org/TR/uievents/#dom-keyboardeventinit-iscomposing
    */
   isComposing: boolean;
 }
 
 /**
- * The KeyboardEventHandler callback function type represents a callback used for keyboard event handlers.
+ * The {@link KeyboardEventHandler } callback function type represents a callback used for keyboard event handlers.
  *
- * Stricter type StrictKeyboardEventHandler replaces the any return value with void.
- *
- * Ref.: @organon/uievents/event-types/keyboard-event
+ * Stricter type {@link StrictKeyboardEventHandler } replaces the any return value with void.
  */
 export type KeyboardEventHandler = EventHandler<KeyboardEvent>;
 /**
- * Stricter version of KeyboardEventHandler callback function type.
+ * {@link StrictKeyboardEventHandler } is a stricter version of {@link KeyboardEventHandler } callback function type.
  *
- * Replaces the any return value with void.
- *
- * Ref.: @organon/uievents/event-types/keyboard-event
+ * It replaces the any return value with void.
  */
 export type StrictKeyboardEventHandler = StrictEventHandler<KeyboardEvent>;
