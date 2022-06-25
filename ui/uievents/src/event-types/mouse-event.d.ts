@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention,no-var,@rushstack/no-new-null,@typescript-eslint/no-explicit-any */
-import { DOMString, EventHandler, StrictEventHandler, UIEvent } from "../base-types";
+import { DOMString, EventHandler, StrictEventHandler, UIEvent, EventModifierInit } from "../base-types";
 
 /**
  * The MouseEvent interface provides specific contextual information associated with Mouse events.
@@ -115,6 +115,74 @@ export interface MouseEvent extends UIEvent {
 export declare var MouseEvent: {
   new (type: DOMString, eventInitDict?: MouseEventInit): MouseEvent;
 };
+
+export interface MouseEventInit extends EventModifierInit {
+  /**
+   * The horizontal coordinate at which the event occurred relative to the origin of the screen coordinate system.
+   *
+   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-screenx
+   */
+  readonly screenX: number;
+  /**
+   * The vertical coordinate at which the event occurred relative to the origin of the screen coordinate system.
+   *
+   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-screeny
+   */
+  readonly screenY: number;
+  /**
+   * The horizontal coordinate at which the event occurred relative to the viewport associated with the event.
+   *
+   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-clientx
+   */
+  readonly clientX: number;
+  /**
+   * The vertical coordinate at which the event occurred relative to the viewport associated with the event.
+   *
+   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-clienty
+   */
+  readonly clientY: number;
+
+  /**
+   * During mouse events caused by the depression or release of a mouse button, button MUST be used to indicate
+   * which pointer device button changed state.
+   *
+   * 0 indicates the primary button of the device (in general, the left button or the only button on
+   * single-button devices, used to activate a user interface control or select text) or the un-initialized value.
+   *
+   * 1 indicates the auxiliary button (in general, the middle button, often combined with a mouse wheel).
+   *
+   * 2 indicates the secondary button (in general, the right button, often used to display a context menu).
+   *
+   * 3 indicates the X1 (back) button.
+   *
+   * 4 indicates the X2 (forward) button.
+   *
+   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-button
+   */
+  readonly button: 0 | 1 | 2 | 3 | 4;
+  /**
+   * During any mouse events, buttons is used to indicate which combination of mouse buttons are currently
+   * being pressed, expressed as a bitmask.
+   *
+   * 0 indicates no button is currently active.
+   *
+   * 1 indicates the primary button of the device (in general, the left button or the only button on single-button
+   * devices, used to activate a user interface control or select text).
+   *
+   * 2 indicates the secondary button (in general, the right button, often used to display a context menu), if present.
+   *
+   * 4 indicates the auxiliary button (in general, the middle button, often combined with a mouse wheel).
+   *
+   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-buttons
+   */
+  readonly buttons: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
+  /**
+   * Used to identify a secondary EventTarget related to a UI event, depending on the type of event.
+   *
+   * Ref.: https://www.w3.org/TR/uievents/#dom-mouseevent-relatedtarget
+   */
+  readonly relatedTarget: EventTarget | null;
+}
 
 /**
  * The MouseEventHandler callback function type represents a callback used for mouse event handlers.
