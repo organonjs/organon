@@ -163,8 +163,8 @@
    * To remove these restrictions, you could set projectFolderMinDepth=1
    * and set projectFolderMaxDepth to a large number.
    */
-  "projectFolderMinDepth": 2,
-  "projectFolderMaxDepth": 2,
+  "projectFolderMinDepth": 3,
+  "projectFolderMaxDepth": 3,
   /**
    * Today the npmjs.com registry enforces fairly strict naming rules for packages, but in the early
    * days there was no standard and hardly any enforcement.  A few large legacy projects are still using
@@ -362,52 +362,52 @@
   "projects": [
     {
       "packageName": "@organon/commitlint-config",
-      "projectFolder": "tooling/commitlint-config",
+      "projectFolder": "packages/tooling/commitlint-config",
       "shouldPublish": true
     },
     {
       "packageName": "@organon/emoji-presentation-map",
-      "projectFolder": "misc/emoji-presentation-map",
+      "projectFolder": "packages/misc/emoji-presentation-map",
       "shouldPublish": true
     },
     {
       "packageName": "@organon/emoji-regex-rgi",
-      "projectFolder": "misc/emoji-regex-rgi",
+      "projectFolder": "packages/misc/emoji-regex-rgi",
       "shouldPublish": true
     },
     {
       "packageName": "@organon/generics",
-      "projectFolder": "misc/generics",
+      "projectFolder": "packages/misc/generics",
       "shouldPublish": true
     },
     {
       "packageName": "@organon/organon-node-rig",
-      "projectFolder": "rigs/organon-node-rig",
+      "projectFolder": "packages/rigs/organon-node-rig",
       "shouldPublish": true
     },
     {
       "packageName": "@organon/organon-web-rig",
-      "projectFolder": "rigs/organon-web-rig",
+      "projectFolder": "packages/rigs/organon-web-rig",
       "shouldPublish": true
     },
     {
       "packageName": "@organon/storykit",
-      "projectFolder": "tooling/storykit",
+      "projectFolder": "packages/tooling/storykit",
       "shouldPublish": false
     },
     {
       "packageName": "@organon/todolist",
-      "projectFolder": "apps/todolist",
+      "projectFolder": "packages/apps/todolist",
       "shouldPublish": true
     },
     {
       "packageName": "@organon/uievents",
-      "projectFolder": "ui/uievents",
+      "projectFolder": "packages/ui/uievents",
       "shouldPublish": true
     },
     {
       "packageName": "conventional-changelog-organon",
-      "projectFolder": "tooling/conventional-changelog",
+      "projectFolder": "packages/tooling/conventional-changelog",
       "shouldPublish": true
       //   /**
       //    * An optional category for usage in the "browser-approved-packages.json"
