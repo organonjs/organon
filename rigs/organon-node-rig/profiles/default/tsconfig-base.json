@@ -12,7 +12,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "../../../../../lib",
-    "types": ["heft-jest"]
+    "types": ["heft-jest", "node"]
   },
   "include": ["../../../../../src"]
 }
