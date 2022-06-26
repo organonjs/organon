@@ -153,6 +153,7 @@ importers:
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
       '@types/heft-jest': ~1.0.3
+      '@types/node': ~18.0.0
       eslint: ~8.18.0
     devDependencies:
       '@commitlint/types': 17.0.0
@@ -162,6 +163,7 @@ importers:
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8
       '@types/heft-jest': 1.0.3
+      '@types/node': 18.0.0
       eslint: 8.18.0
 
   ../../packages/tooling/conventional-changelog:
@@ -173,6 +175,7 @@ importers:
       '@rushstack/heft': ~0.45.8
       '@types/conventional-changelog-core': ~4.2.1
       '@types/heft-jest': ~1.0.3
+      '@types/node': ~18.0.0
       conventional-changelog-conventionalcommits: ~5.0.0
       eslint: ~8.18.0
     dependencies:
@@ -185,6 +188,7 @@ importers:
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8
       '@types/heft-jest': 1.0.3
+      '@types/node': 18.0.0
       eslint: 8.18.0
 
   ../../packages/tooling/storykit:

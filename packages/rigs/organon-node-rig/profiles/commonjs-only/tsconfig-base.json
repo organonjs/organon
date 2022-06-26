@@ -11,8 +11,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "../../../../../lib",
-    "types": ["heft-jest"]
+    "outDir": "",
+    "types": ["heft-jest", "node"]
   },
-  "include": ["../../../../../src"]
+  "include": []
 }

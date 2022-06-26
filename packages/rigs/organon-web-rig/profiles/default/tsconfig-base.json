@@ -12,8 +12,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "../../../../../lib",
+    "outDir": "",
     "types": ["heft-jest", "webpack-env"]
   },
-  "include": ["../../../../../src"]
+  "include": []
 }
