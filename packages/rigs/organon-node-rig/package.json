@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/organonjs/organon/tree/main/rigs/organon-node-rig"
+    "url": "https://github.com/organonjs/organon/tree/main/packages/rigs/organon-node-rig"
   },
   "scripts": {
     "build": ""

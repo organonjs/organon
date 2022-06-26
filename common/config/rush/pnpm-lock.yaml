@@ -30,6 +30,7 @@ importers:
       react: ~18.2.0
       react-beautiful-dnd: ~13.1.0
       react-dom: ~18.2.0
+      source-map-loader: ~4.0.0
       webpack: ~5.68.0
     dependencies:
       '@emotion/react': 11.9.3_7eu627umq2cbnjxmysy5yb5jqq
@@ -56,6 +57,7 @@ importers:
       '@types/node': 18.0.0
       '@types/webpack-env': 1.17.0
       eslint: 8.18.0
+      source-map-loader: 4.0.0_webpack@5.68.0
       webpack: 5.68.0
 
   ../../packages/misc/emoji-presentation-map:
@@ -65,6 +67,7 @@ importers:
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
       '@types/heft-jest': ~1.0.3
+      '@types/node': ~18.0.0
       eslint: ~8.18.0
     devDependencies:
       '@organon/emoji-regex-rgi': link:../emoji-regex-rgi
@@ -72,6 +75,7 @@ importers:
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8
       '@types/heft-jest': 1.0.3
+      '@types/node': 18.0.0
       eslint: 8.18.0
 
   ../../packages/misc/emoji-regex-rgi:
@@ -79,11 +83,13 @@ importers:
       '@organon/organon-node-rig': workspace:*
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
+      '@types/node': ~18.0.0
       eslint: ~8.18.0
     devDependencies:
       '@organon/organon-node-rig': link:../../rigs/organon-node-rig
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8
+      '@types/node': 18.0.0
       eslint: 8.18.0
 
   ../../packages/misc/generics:
@@ -91,11 +97,13 @@ importers:
       '@organon/organon-node-rig': workspace:*
       '@rushstack/eslint-config': ~2.6.1
       '@rushstack/heft': ~0.45.8
+      '@types/node': ~18.0.0
       eslint: ~8.18.0
     devDependencies:
       '@organon/organon-node-rig': link:../../rigs/organon-node-rig
       '@rushstack/eslint-config': 2.6.1
       '@rushstack/heft': 0.45.8
+      '@types/node': 18.0.0
       eslint: 8.18.0
 
   ../../packages/rigs/organon-node-rig:
@@ -114,10 +122,11 @@ importers:
       '@rushstack/heft-jest-plugin': ~0.3.8
       '@rushstack/heft-storybook-plugin': ~0.1.54
       '@rushstack/heft-webpack5-plugin': ~0.5.23
+      '@types/node': ~18.0.0
       css-loader: ~6.7.1
       eslint: ~8.18.0
       html-webpack-plugin: ~5.5.0
-      source-map-loader: ~3.0.1
+      source-map-loader: ~4.0.0
       style-loader: ~3.3.1
       typescript: ~4.7.4
       webpack: ~5.68.0
@@ -126,10 +135,11 @@ importers:
       '@rushstack/heft-jest-plugin': 0.3.8_@rushstack+heft@0.45.8
       '@rushstack/heft-storybook-plugin': 0.1.54_@rushstack+heft@0.45.8
       '@rushstack/heft-webpack5-plugin': 0.5.23_2qnnihoehegaxjknskk76leize
+      '@types/node': 18.0.0
       css-loader: 6.7.1_webpack@5.68.0
       eslint: 8.18.0
       html-webpack-plugin: 5.5.0_webpack@5.68.0
-      source-map-loader: 3.0.1_webpack@5.68.0
+      source-map-loader: 4.0.0_webpack@5.68.0
       style-loader: 3.3.1_webpack@5.68.0
       typescript: 4.7.4
       webpack: 5.68.0
@@ -4921,7 +4931,6 @@ packages:
 
   /abab/2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
-    dev: false
 
   /accepts/1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
@@ -8601,7 +8610,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       safer-buffer: 2.1.2
-    dev: false
 
   /icss-utils/4.1.1:
     resolution: {integrity: sha512-4aFq7wvWyMHKgxsH8QQtGpvbASCf+eM3wPRLI6R+MgAnTCZ6STYsRvttLvRWK0Nfif5piF394St3HeJDaljGPA==}
@@ -13008,17 +13016,16 @@ packages:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
 
-  /source-map-loader/3.0.1_webpack@5.68.0:
-    resolution: {integrity: sha512-Vp1UsfyPvgujKQzi4pyDiTOnE3E4H+yHvkVRN3c/9PJmQS4CQJExvcDvaX/D+RV+xQben9HJ56jMJS3CgUeWyA==}
-    engines: {node: '>= 12.13.0'}
+  /source-map-loader/4.0.0_webpack@5.68.0:
+    resolution: {integrity: sha512-i3KVgM3+QPAHNbGavK+VBq03YoJl24m9JWNbLgsjTj8aJzXG9M61bantBTNBt7CNwY2FYf+RJRYJ3pzalKjIrw==}
+    engines: {node: '>= 14.15.0'}
     peerDependencies:
-      webpack: ^5.0.0
+      webpack: ^5.72.1
     dependencies:
       abab: 2.0.6
       iconv-lite: 0.6.3
       source-map-js: 1.0.2
       webpack: 5.68.0
-    dev: false
 
   /source-map-resolve/0.5.3:
     resolution: {integrity: sha512-Htz+RnsXWk5+P2slx5Jh3Q66vhQj1Cllm0zvnaY98+NFx+Dv2CF/f5O/t8x+KaNdrdIAsruNzoh/KpialbqAnw==}

@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/organonjs/organon/tree/main/tooling/commitlint-config"
+    "url": "https://github.com/organonjs/organon/tree/main/packages/tooling/commitlint-config"
   },
   "scripts": {
     "build": "heft test --clean"

@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/organonjs/organon/tree/main/misc/emoji-regex-rgi"
+    "url": "https://github.com/organonjs/organon/tree/main/packages/misc/emoji-regex-rgi"
   },
   "scripts": {
     "build": "heft build --clean"
@@ -30,6 +30,7 @@
     "@organon/organon-node-rig": "workspace:*",
     "@rushstack/eslint-config": "~2.6.1",
     "@rushstack/heft": "~0.45.8",
+    "@types/node": "~18.0.0",
     "eslint": "~8.18.0"
   }
 }
