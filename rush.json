@@ -391,6 +391,11 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@organon/rush-commands",
+      "projectFolder": "packages/tooling/rush-commands",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@organon/storykit",
       "projectFolder": "packages/tooling/storykit",
       "shouldPublish": false

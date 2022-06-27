@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "@organon/rush-commands",
+  "version": "0.0.1",
+  "description": "Custom commands for rush",
+  "keywords": [
+    "rush",
+    "command"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "cjs/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "cjs"
+  ],
+  "author": {
+    "name": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organonjs/organon/tree/main/packages/tooling/rush-commands"
+  },
+  "scripts": {
+    "build": "heft build --clean"
+  },
+  "dependencies": {
+    "@microsoft/rush-lib": "^5.74.0"
+  },
+  "devDependencies": {
+    "@organon/organon-node-rig": "workspace:*",
+    "@rushstack/eslint-config": "~2.6.1",
+    "@rushstack/heft": "~0.45.8",
+    "@types/heft-jest": "~1.0.3",
+    "@types/node": "~18.0.0",
+    "eslint": "~8.18.0"
+  }
+}
