@@ -398,7 +398,7 @@
     {
       "packageName": "@organon/storykit",
       "projectFolder": "packages/tooling/storykit",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@organon/todolist",
@@ -441,7 +441,7 @@
       //    * the Rush change and publish workflows. The default value is false.
       //    * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
       //    */
-      //   // "shouldPublish": false,
+      //   // "shouldPublish": true,
       //
       //   /**
       //    * Facilitates postprocessing of a project's files prior to publishing.

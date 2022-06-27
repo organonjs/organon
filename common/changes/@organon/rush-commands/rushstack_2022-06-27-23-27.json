@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(rush-commands): publish tweak cmds\n\nAt this stage the repo is mostly minimal code calling each other.\nPublishing all doesn't make sense, but a bug in the deps of cmd\nchangefiles requires shouldPublish to be true in order for change files\nto be automatically generated on commit.\n\nOn the other hand, commands are helpers to be used asap, but in a\nstable version, so they must be installed, so they must be published.\n\nAfter publication, there will be potentially 2 more commands:\nrush shouldPublishAllPackages and rush shouldPublishOnlyCwdPackage\nthat edit on the fly the root rush.json config file.\n",
+      "packageName": "@organon/rush-commands",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/rush-commands",
+  "email": "jason.lenoble@gmail.com"
+}
