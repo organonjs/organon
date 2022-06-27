@@ -33,7 +33,7 @@
     {
       "name": "changefiles",
       "commandKind": "global",
-      "summary": "",
+      "summary": "Used by the post-commit Git hook. This command invokes common/scripts/rush-changefiles.js to produce automatic change files for feat/fix commits",
       "autoinstallerName": "rush-changemanager",
       "shellCommand": "node common/scripts/rush-changefiles.js"
     }
