@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(uievents): 2 event init types\n\nEventModifierInit and MouseEventInit.\n",
+      "packageName": "@organon/uievents",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/uievents",
+  "email": "jason.lenoble@gmail.com"
+}

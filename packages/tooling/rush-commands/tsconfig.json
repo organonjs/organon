@@ -1,0 +1,5 @@
+{
+  "extends": "@organon/organon-node-rig/profiles/default/tsconfig-no-test.json",
+  "compilerOptions": { "outDir": "lib" },
+  "include": ["src"]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "@organon/todolist",
+  "version": "0.0.1",
+  "description": "Basic todo list",
+  "keywords": [
+    "react",
+    "todolist"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "cjs/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "cjs",
+    "assets"
+  ],
+  "author": {
+    "name": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organonjs/organon/tree/main/packages/apps/todolist"
+  },
+  "scripts": {
+    "build": "heft test --clean",
+    "start": "heft start",
+    "storybook": "heft start --storybook"
+  },
+  "dependencies": {
+    "@emotion/react": "~11.9.3",
+    "@emotion/styled": "~11.9.3",
+    "@mui/icons-material": "~5.8.4",
+    "@mui/material": "~5.8.4",
+    "@organon/uievents": "workspace:*",
+    "@types/react": "~18.0.14",
+    "@types/react-dom": "~18.0.5",
+    "@types/react-beautiful-dnd": "13.1.2",
+    "clsx": "~1.1.1",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "react-beautiful-dnd": "~13.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.18.5",
+    "@organon/organon-web-rig": "workspace:*",
+    "@organon/storykit": "workspace:*",
+    "@rushstack/eslint-config": "~2.6.1",
+    "@rushstack/heft": "~0.45.8",
+    "@rushstack/heft-storybook-plugin": "~0.1.54",
+    "@rushstack/heft-webpack5-plugin": "~0.5.23",
+    "@types/heft-jest": "~1.0.3",
+    "@types/node": "~18.0.0",
+    "@types/webpack-env": "~1.17.0",
+    "eslint": "~8.18.0",
+    "source-map-loader": "~4.0.0",
+    "webpack": "~5.68.0"
+  }
+}

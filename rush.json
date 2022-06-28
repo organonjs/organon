@@ -163,8 +163,8 @@
    * To remove these restrictions, you could set projectFolderMinDepth=1
    * and set projectFolderMaxDepth to a large number.
    */
-  "projectFolderMinDepth": 2,
-  "projectFolderMaxDepth": 2,
+  "projectFolderMinDepth": 3,
+  "projectFolderMaxDepth": 3,
   /**
    * Today the npmjs.com registry enforces fairly strict naming rules for packages, but in the early
    * days there was no standard and hardly any enforcement.  A few large legacy projects are still using
@@ -245,7 +245,7 @@
      * you might configure your system's trigger to look for a special string such as "[skip-ci]"
      * in the commit message, and then customize Rush's message to contain that string.
      */
-    // "versionBumpCommitMessage": "Applying package updates. [skip-ci]",
+    "versionBumpCommitMessage": "🔧 chore(auto): version bump [skip-ci]",
     /**
      * The commit message to use when committing changes during 'rush version'.
      *
@@ -253,7 +253,7 @@
      * you might configure your system's trigger to look for a special string such as "[skip-ci]"
      * in the commit message, and then customize Rush's message to contain that string.
      */
-    // "changeLogUpdateCommitMessage": "Deleting change files and updating change logs for package updates. [skip-ci]"
+    "changeLogUpdateCommitMessage": "🔧 chore(auto): Del change files, update change logs [skip-ci]"
   },
   "repository": {
     /**
@@ -362,42 +362,58 @@
   "projects": [
     {
       "packageName": "@organon/commitlint-config",
-      "projectFolder": "tooling/commitlint-config",
-      "shouldPublish": true
+      "projectFolder": "packages/tooling/commitlint-config",
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/emoji-presentation-map",
-      "projectFolder": "misc/emoji-presentation-map",
-      "shouldPublish": true
+      "projectFolder": "packages/misc/emoji-presentation-map",
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/emoji-regex-rgi",
-      "projectFolder": "misc/emoji-regex-rgi",
-      "shouldPublish": true
+      "projectFolder": "packages/misc/emoji-regex-rgi",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@organon/generics",
+      "projectFolder": "packages/misc/generics",
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/organon-node-rig",
-      "projectFolder": "rigs/organon-node-rig",
-      "shouldPublish": true
+      "projectFolder": "packages/rigs/organon-node-rig",
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/organon-web-rig",
-      "projectFolder": "rigs/organon-web-rig",
-      "shouldPublish": true
+      "projectFolder": "packages/rigs/organon-web-rig",
+      "shouldPublish": false
     },
     {
-      "packageName": "@organon/todolist",
-      "projectFolder": "apps/todolist",
+      "packageName": "@organon/rush-commands",
+      "projectFolder": "packages/tooling/rush-commands",
       "shouldPublish": true
     },
     {
       "packageName": "@organon/storykit",
-      "projectFolder": "tooling/storykit"
+      "projectFolder": "packages/tooling/storykit",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@organon/todolist",
+      "projectFolder": "packages/apps/todolist",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@organon/uievents",
+      "projectFolder": "packages/ui/uievents",
+      "shouldPublish": false
     },
     {
       "packageName": "conventional-changelog-organon",
-      "projectFolder": "tooling/conventional-changelog",
-      "shouldPublish": true
+      "projectFolder": "packages/tooling/conventional-changelog",
+      "shouldPublish": false
       //   /**
       //    * An optional category for usage in the "browser-approved-packages.json"
       //    * and "nonbrowser-approved-packages.json" files.  The value must be one of the

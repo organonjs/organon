@@ -1,0 +1,5 @@
+{
+  "extends": "@organon/organon-node-rig/profiles/commonjs-only/tsconfig-base.json",
+  "compilerOptions": { "outDir": "lib" },
+  "include": ["src"]
+}

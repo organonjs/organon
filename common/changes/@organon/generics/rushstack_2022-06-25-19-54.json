@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(generics): inequality utility type\n\nnamely IsUnequal<A, B>.\n",
+      "packageName": "@organon/generics",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/generics",
+  "email": "jason.lenoble@gmail.com"
+}

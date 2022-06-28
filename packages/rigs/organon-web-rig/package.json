@@ -1,0 +1,38 @@
+{
+  "name": "@organon/organon-web-rig",
+  "version": "0.0.1",
+  "description": "A rig package for Web projects",
+  "keywords": [
+    "rig",
+    "config"
+  ],
+  "license": "MIT",
+  "files": [
+    "profiles"
+  ],
+  "author": {
+    "name": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organonjs/organon/tree/main/packages/rigs/organon-web-rig"
+  },
+  "scripts": {
+    "build": ""
+  },
+  "dependencies": {
+    "@rushstack/heft": "~0.45.8",
+    "@rushstack/heft-jest-plugin": "~0.3.8",
+    "@rushstack/heft-storybook-plugin": "~0.1.54",
+    "@rushstack/heft-webpack5-plugin": "~0.5.23",
+    "@types/node": "~18.0.0",
+    "css-loader": "~6.7.1",
+    "eslint": "~8.18.0",
+    "html-webpack-plugin": "~5.5.0",
+    "source-map-loader": "~4.0.0",
+    "style-loader": "~3.3.1",
+    "typescript": "~4.7.4",
+    "webpack": "~5.68.0"
+  }
+}

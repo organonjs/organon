@@ -12,15 +12,11 @@
    */
   "commands": [
     {
-      "name": "prettier",
+      "name": "changefiles",
       "commandKind": "global",
-      "summary": "Used by the pre-commit Git hook. This command invokes Prettier to reformat staged changes.",
-      "safeForSimultaneousRushProcesses": true,
-
-      "autoinstallerName": "rush-prettier",
-
-      // This will invoke common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
-      "shellCommand": "pretty-quick --staged"
+      "summary": "Used by the post-commit Git hook. This command invokes common/scripts/rush-changefiles.js to produce automatic change files for feat/fix commits",
+      "autoinstallerName": "rush-changemanager",
+      "shellCommand": "node common/scripts/rush-changefiles.js"
     },
     {
       "name": "commitlint",
@@ -31,11 +27,13 @@
       "shellCommand": "commitlint"
     },
     {
-      "name": "changefiles",
+      "name": "prettier",
       "commandKind": "global",
-      "summary": "",
-      "autoinstallerName": "rush-changemanager",
-      "shellCommand": "node common/scripts/rush-changefiles.js"
+      "summary": "Used by the pre-commit Git hook. This command invokes Prettier to reformat staged changes.",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "rush-prettier",
+      // This will invoke common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
+      "shellCommand": "pretty-quick --staged"
     }
     // {
     //   /**

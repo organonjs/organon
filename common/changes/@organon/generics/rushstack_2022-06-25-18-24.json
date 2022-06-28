@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "✨ feat(generics): equality utility type\n\nNamely IsEqual<A,B>.\n",
+      "packageName": "@organon/generics",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@organon/generics",
+  "email": "jason.lenoble@gmail.com"
+}
