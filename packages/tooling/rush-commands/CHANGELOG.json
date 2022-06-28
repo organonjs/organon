@@ -1,0 +1,20 @@
+{
+  "name": "@organon/rush-commands",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@organon/rush-commands_v0.1.0",
+      "date": "Mon, 27 Jun 2022 23:42:18 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "✨ feat(tooling): new package rush-commands\n\nJust command rush-find for the moment.\n"
+          },
+          {
+            "comment": "✨ feat(rush-commands): publish tweak cmds\n\nAt this stage the repo is mostly minimal code calling each other.\nPublishing all doesn't make sense, but a bug in the deps of cmd\nchangefiles requires shouldPublish to be true in order for change files\nto be automatically generated on commit.\n\nOn the other hand, commands are helpers to be used asap, but in a\nstable version, so they must be installed, so they must be published.\n\nAfter publication, there will be potentially 2 more commands:\nrush shouldPublishAllPackages and rush shouldPublishOnlyCwdPackage\nthat edit on the fly the root rush.json config file.\n"
+          }
+        ]
+      }
+    }
+  ]
+}

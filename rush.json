@@ -245,7 +245,7 @@
      * you might configure your system's trigger to look for a special string such as "[skip-ci]"
      * in the commit message, and then customize Rush's message to contain that string.
      */
-    // "versionBumpCommitMessage": "Applying package updates. [skip-ci]",
+    "versionBumpCommitMessage": "🔧 chore(auto): version bump [skip-ci]",
     /**
      * The commit message to use when committing changes during 'rush version'.
      *
@@ -253,7 +253,7 @@
      * you might configure your system's trigger to look for a special string such as "[skip-ci]"
      * in the commit message, and then customize Rush's message to contain that string.
      */
-    // "changeLogUpdateCommitMessage": "Deleting change files and updating change logs for package updates. [skip-ci]"
+    "changeLogUpdateCommitMessage": "🔧 chore(auto): Del change files, update change logs [skip-ci]"
   },
   "repository": {
     /**
@@ -363,32 +363,32 @@
     {
       "packageName": "@organon/commitlint-config",
       "projectFolder": "packages/tooling/commitlint-config",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/emoji-presentation-map",
       "projectFolder": "packages/misc/emoji-presentation-map",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/emoji-regex-rgi",
       "projectFolder": "packages/misc/emoji-regex-rgi",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/generics",
       "projectFolder": "packages/misc/generics",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/organon-node-rig",
       "projectFolder": "packages/rigs/organon-node-rig",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/organon-web-rig",
       "projectFolder": "packages/rigs/organon-web-rig",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/rush-commands",
@@ -398,22 +398,22 @@
     {
       "packageName": "@organon/storykit",
       "projectFolder": "packages/tooling/storykit",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/todolist",
       "projectFolder": "packages/apps/todolist",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "@organon/uievents",
       "projectFolder": "packages/ui/uievents",
-      "shouldPublish": true
+      "shouldPublish": false
     },
     {
       "packageName": "conventional-changelog-organon",
       "projectFolder": "packages/tooling/conventional-changelog",
-      "shouldPublish": true
+      "shouldPublish": false
       //   /**
       //    * An optional category for usage in the "browser-approved-packages.json"
       //    * and "nonbrowser-approved-packages.json" files.  The value must be one of the
@@ -441,7 +441,7 @@
       //    * the Rush change and publish workflows. The default value is false.
       //    * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
       //    */
-      //   // "shouldPublish": true,
+      //   // "shouldPublish": false,
       //
       //   /**
       //    * Facilitates postprocessing of a project's files prior to publishing.
